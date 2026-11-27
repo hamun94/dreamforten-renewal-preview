@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>아동·청소년·청년 마음건강 변화 추이 (2000~2026.11)</title>
+<meta name="author" content="OH Kyoungok (오경옥)">
+<meta name="description" content="2000년부터 2026년 11월까지 아동·청소년·청년 마음건강 변화 추이를 검증된 선행논문 46편으로 정리한 보고서">
+<style>
+:root{
+  --bg:#f6f4f0; --card:#fff; --ink:#1d1f1d; --muted:#5f665f; --line:#e2ded6;
+  --green:#1f6f5c; --green-l:#e6f0ec; --red:#b1462f; --red-l:#f8e9e4; --gold:#a9832f;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",sans-serif;font-size:17px;line-height:1.72;letter-spacing:-0.01em;word-break:keep-all}
+a{color:var(--green);text-decoration-thickness:1px;text-underline-offset:3px}
+.wrap{max-width:860px;margin:0 auto;padding:0 18px 80px}
+.topbar{position:sticky;top:0;z-index:20;background:rgba(246,244,240,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.topbar .in{max-width:860px;margin:0 auto;padding:10px 18px;display:flex;align-items:center;gap:10px;font-size:13.5px;font-weight:700;color:var(--green)}
+.topbar .dot{width:8px;height:8px;border-radius:50%;background:var(--green)}
+header.hero{padding:34px 0 8px}
+.kicker{font-size:13px;font-weight:700;letter-spacing:.08em;color:var(--red);text-transform:uppercase}
+h1{font-size:31px;line-height:1.32;margin:10px 0 14px;font-weight:800;letter-spacing:-0.03em}
+h1 small{display:block;font-size:15px;font-weight:600;color:var(--muted);letter-spacing:0;margin-top:8px}
+.byline{font-size:14px;color:var(--muted);border-left:3px solid var(--green);padding-left:12px;margin:0}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:26px 0 6px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 15px}
+.stat b{display:block;font-size:25px;line-height:1.15;color:var(--green);letter-spacing:-0.02em}
+.stat b.red{color:var(--red)}
+.stat span{display:block;font-size:12.5px;color:var(--muted);margin-top:5px;line-height:1.45}
+h2{font-size:22px;margin:44px 0 8px;padding-top:22px;border-top:1px solid var(--line);letter-spacing:-0.02em}
+h2 .no{color:var(--green);font-size:14px;display:block;letter-spacing:.06em;margin-bottom:4px}
+h3{font-size:17.5px;margin:26px 0 8px}
+p{margin:10px 0}
+ul,ol{padding-left:20px;margin:10px 0}
+li{margin:6px 0}
+blockquote{margin:16px 0;padding:12px 16px;background:var(--green-l);border-radius:12px;font-size:15.5px;color:#20443b}
+blockquote p{margin:4px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px 18px 16px;margin:14px 0}
+.card h3{margin-top:0}
+.lead{font-size:17px;color:#3c423d}
+.tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--line);border-radius:14px;background:var(--card);margin:14px 0}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:520px}
+th,td{padding:9px 11px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:#efebe4;font-size:12.5px;color:#4a514b;font-weight:700;white-space:nowrap}
+tr:last-child td{border-bottom:none}
+td.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.note{font-size:13px;color:var(--muted)}
+.chart{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:12px 10px 8px;margin:16px 0}
+.chart svg{width:100%;height:auto;display:block}
+.grid{stroke:#e6e1d8;stroke-width:1}
+.ax{font-size:11px;fill:#7a817a}
+.lineAll{fill:none;stroke:#1f6f5c;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+.lineGirl{fill:none;stroke:#b1462f;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.lineBoy{fill:none;stroke:#a9832f;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:5 4}
+figcaption{font-size:12.5px;color:var(--muted);padding:6px 6px 0}
+.lg{display:inline-block;width:14px;height:3px;border-radius:2px;vertical-align:middle;margin:0 4px 0 8px}
+.lg.all{background:#1f6f5c} .lg.girl{background:#b1462f} .lg.boy{background:#a9832f}
+.filters{display:flex;gap:8px;margin:14px 0 10px;flex-wrap:wrap}
+.filters button{font:inherit;font-size:14px;font-weight:700;padding:8px 15px;border-radius:999px;border:1px solid var(--line);background:#fff;color:#4a514b}
+.filters button.on{background:var(--green);border-color:var(--green);color:#fff}
+details.paper{background:var(--card);border:1px solid var(--line);border-radius:14px;margin:8px 0;overflow:hidden}
+details.paper summary{display:flex;gap:8px;align-items:baseline;padding:12px 14px;cursor:pointer;list-style:none;font-size:15px;line-height:1.5}
+details.paper summary::-webkit-details-marker{display:none}
+details.paper summary::after{content:"+";margin-left:auto;color:var(--green);font-weight:800;font-size:17px}
+details.paper[open] summary::after{content:"–"}
+.num{font-size:11.5px;color:#9aa19a;font-variant-numeric:tabular-nums;min-width:18px}
+.py{font-size:12.5px;font-weight:800;color:var(--green);min-width:38px}
+.pt{flex:1;font-weight:600}
+.badge{font-size:10.5px;font-weight:800;padding:2px 7px;border-radius:6px;white-space:nowrap}
+.badge.국내{background:var(--green-l);color:var(--green)}
+.badge.국외{background:#efe9dc;color:#8a6a22}
+.pbody{padding:2px 14px 14px;border-top:1px dashed var(--line);font-size:14.5px;color:#3c423d}
+.pbody .meta{font-size:12.5px;color:var(--muted)}
+.pbody .jn{font-style:italic}
+.pbody .kpi{background:#f7f5f1;border-radius:10px;padding:9px 11px;font-size:14px}
+.pbody .lim{font-size:13.5px;color:#6a5a52}
+.pbody .link{font-size:13.5px;margin-bottom:0}
+.pill{display:inline-block;background:var(--red-l);color:var(--red);font-size:12px;font-weight:700;padding:2px 9px;border-radius:999px;margin-right:6px}
+.grid2{display:grid;gap:12px}
+@media(min-width:640px){.grid2{grid-template-columns:1fr 1fr} .stats{grid-template-columns:repeat(4,1fr)} h1{font-size:38px}}
+footer{margin-top:50px;padding-top:22px;border-top:1px solid var(--line);font-size:13.5px;color:var(--muted)}
+.toc{background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px 18px;margin:22px 0}
+.toc ol{margin:0;padding-left:20px;font-size:15px}
+.toc a{text-decoration:none}
+@media print{.topbar,.filters{display:none} details.paper{break-inside:avoid} details.paper summary::after{content:""}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="in"><span class="dot"></span>아동·청소년·청년 마음건강 변화 추이 · 2000~2026.11</div></div>
+<div class="wrap">
+
+<header class="hero">
+  <div class="kicker">선행논문 근거 정리</div>
+  <h1>아동·청소년·청년 마음건강 변화 추이<small>2000년 ~ 2026년 11월 25일 · 검증된 국내외 선행논문 46편</small></h1>
+  <p class="byline">작성 <strong>OH Kyoungok (오경옥)</strong> · 2026-11-27<br>출발점: 류정희(한국보건사회연구원), 「아동청소년 마음건강, 지금 무엇이 필요한가」, 참여연대 월간복지동향</p>
+</header>
+
+<div class="stats">
+  <div class="stat"><b class="red">8.6명</b><span>2025년 10대 자살률(10만 명당) · 역대 최고</span></div>
+  <div class="stat"><b class="red">+76.6%</b><span>정신질환 진료 소아청소년 2020→2024</span></div>
+  <div class="stat"><b class="red">1.98배</b><span>19세 미만 비자의입원 2020→2024</span></div>
+  <div class="stat"><b class="red">2.9배</b><span>학교 밖 자살시도율 7.8% vs 재학 2.7%</span></div>
+</div>
+
+<nav class="toc">
+  <ol>
+    <li><a href="#s1">현황 출발점: 류정희(2026)의 지표</a></li>
+    <li><a href="#s2">2000~2026 시기별 추이 (4기)</a></li>
+    <li><a href="#s3">생애주기별 비교</a></li>
+    <li><a href="#s4">위험요인의 전환</a></li>
+    <li><a href="#s5">지원체계의 한계와 No Wrong Door</a></li>
+    <li><a href="#s6">검증된 선행논문 46편</a></li>
+    <li><a href="#s7">방법·검증·한계</a></li>
+  </ol>
+</nav>
+
+<section id="s0">
+<h2><span class="no">SUMMARY</span>한눈에 보는 결론</h2>
+<ol class="lead">
+  <li><strong>증가는 '모든 아이'의 균일한 악화가 아니다.</strong> 2000년대 검토에서 유아·아동의 악화는 확인되지 않았고, 증가는 <strong>청소년 여아의 우울·불안</strong>에서 먼저 나타나 이후 남아와 청년층으로 번졌다.</li>
+  <li><strong>2012년 전후가 변곡점이다.</strong> 미국·영국·37개국 자료가 모두 2012년 이후 우울·자해·외로움의 반전을 보여준다. 국내도 2015년 이후 우울·자살지표가 다시 올랐다.</li>
+  <li><strong>코로나19는 '첫해 착시' 뒤 2년차 악화였다.</strong> 2020년 국내 지표는 추세 예상치보다 낮았고(우울 −13%, 자살시도 −40%), 2021년에 반등했다.</li>
+  <li><strong>지표는 내려가는데 사망은 올랐다.</strong> 2023~2025년 자기보고 자살생각은 감소했지만, 2025년 10대 자살률은 8.6명으로 역대 최고다.</li>
+  <li><strong>지원체계의 진단은 25년째 같다.</strong> 2012년의 '3중 전달체계·중복·선별주의·예산 부족'이 2026년 연구에서 거의 그대로 반복된다.</li>
+</ol>
+</section>
+
+<section id="s1">
+<h2><span class="no">01</span>현황 출발점: 류정희(2026)의 지표</h2>
+<p>배경 글은 대부분 <strong>'사망·진료·입원'이라는 결과 지표</strong>로 위기를 보여준다. 결과 지표는 이미 위기가 깊어진 뒤에 움직인다. 그래서 2장에서는 결과 지표보다 먼저 움직이는 자기보고 지표를 2000년부터 따라간다.</p>
+<div class="tablewrap"><table>
+<tr><th>지표</th><th>수치</th><th>출처(글에서 인용)</th></tr>
+<tr><td>2025년 10대 자살률</td><td class="n"><strong>8.6명</strong>/10만 (2024년 8.0명)</td><td>국가데이터처, 2025년 사망원인통계(2026)</td></tr>
+<tr><td>10대 사망 중 자살 비중</td><td class="n"><strong>51.2%</strong> (사망원인 1위, 14년째)</td><td>성평등가족부(2026b)</td></tr>
+<tr><td>전체 자살률</td><td class="n">27.8명 (전년 29.1명, <span class="pill">하락</span>)</td><td>국가데이터처(2026)</td></tr>
+<tr><td>청소년 자살사망자 추정동기</td><td class="n">정신적 문제 55.6%, 관계문제 13.2%</td><td>국가데이터처(2026)</td></tr>
+<tr><td>우울감 경험률(2025)</td><td class="n">남 21.7%, 여 29.9%</td><td>질병관리청(2025)</td></tr>
+<tr><td>스트레스 인지율(2025, 여)</td><td class="n">50.3% (고등학교 여 53.0%)</td><td>질병관리청(2025)</td></tr>
+<tr><td>정신질환 진료 소아청소년</td><td class="n">198,384명 → 350,337명 (<strong>+76.6%</strong>)</td><td>건강보험심사평가원(2025)</td></tr>
+<tr><td>아동청소년 정신과 약물 처방</td><td class="n">4년 반 동안 <strong>220만 명</strong> 초과</td><td>의협신문(2025)</td></tr>
+<tr><td>19세 미만 비자의입원</td><td class="n">1,076명 → 2,126명 (<strong>1.98배</strong>)</td><td>서영석 의원실 재구성</td></tr>
+<tr><td>비자의입원 사유</td><td class="n">행동문제 <strong>2.51배</strong>, 정서문제 <strong>1.83배</strong></td><td>의협신문(2025)</td></tr>
+<tr><td>10대 스마트폰 과의존 위험군</td><td class="n"><strong>43.0%</strong> (2024년 42.6%)</td><td>과기정통부·NIA(2026)</td></tr>
+<tr><td>학교 밖 자살시도율 / 자살생각률</td><td class="n">7.8% vs 2.7% / 21.1% vs 11.6%</td><td>성평등가족부(2026a)</td></tr>
+<tr><td>아동정신건강복지센터</td><td class="n">전국 <strong>4개소 + 분소 2개소</strong></td><td>글 본문</td></tr>
+<tr><td>서울 정신건강의학과 초진 대기</td><td class="n">평균 <strong>3개월 이상</strong></td><td>조선일보(2025)</td></tr>
+<tr><td>정책 목표</td><td class="n">2035년 4.2명 (2025년 이미 초과)</td><td>관계부처 합동(2026)</td></tr>
+</table></div>
+
+<h3>1-1. 국내 청소년 자기보고 지표의 장기 추이</h3>
+<figure class="chart">
+<svg viewBox="0 0 720 300" role="img" aria-label="청소년 우울감 경험률 추이 2005~2024">
+<line x1="44" y1="230.6" x2="708" y2="230.6" class="grid"/><text x="36" y="234.6" class="ax" text-anchor="end">20</text><line x1="44" y1="159.7" x2="708" y2="159.7" class="grid"/><text x="36" y="163.7" class="ax" text-anchor="end">30</text><line x1="44" y1="88.9" x2="708" y2="88.9" class="grid"/><text x="36" y="92.9" class="ax" text-anchor="end">40</text><line x1="44" y1="18.0" x2="708" y2="18.0" class="grid"/><text x="36" y="22.0" class="ax" text-anchor="end">50</text>
+<path d="M44.0,160.4 L78.9,78.9 L113.9,79.6 L148.8,97.4 L183.8,106.6 L218.7,107.3 L253.7,139.9 L288.6,156.2 L323.6,153.3 L358.5,183.1 L393.5,205.1 L428.4,191.6 L463.4,194.4 L498.3,180.3 L533.3,172.5 L568.2,193.7 L603.2,182.4 L638.1,168.9 L673.1,188.1 L708.0,176.0" class="lineAll"/>
+<path d="M44.0,126.4 L78.9,44.9 L113.9,42.1 L148.8,58.4 L183.8,64.1 L218.7,70.4 L253.7,101.6 L288.6,117.2 L323.6,109.4 L358.5,148.4 L393.5,175.3 L428.4,156.2 L463.4,157.6 L498.3,134.2 L533.3,127.1 L568.2,154.8 L603.2,149.8 L638.1,134.9 L673.1,153.3 L708.0,142.0" class="lineGirl"/>
+<path d="M44.0,190.9 L78.9,109.4 L113.9,113.7 L148.8,131.4 L183.8,144.8 L218.7,140.6 L253.7,173.9 L288.6,191.6 L323.6,193.7 L358.5,215.0 L393.5,232.7 L428.4,224.2 L463.4,228.4 L498.3,222.8 L533.3,215.0 L568.2,229.9 L603.2,213.6 L638.1,200.8 L673.1,220.7 L708.0,208.6" class="lineBoy"/>
+<text x="44.0" y="290" class="ax" text-anchor="middle">2005</text><text x="148.8" y="290" class="ax" text-anchor="middle">2008</text><text x="253.7" y="290" class="ax" text-anchor="middle">2011</text><text x="358.5" y="290" class="ax" text-anchor="middle">2014</text><text x="463.4" y="290" class="ax" text-anchor="middle">2017</text><text x="568.2" y="290" class="ax" text-anchor="middle">2020</text><text x="673.1" y="290" class="ax" text-anchor="middle">2023</text><text x="708.0" y="290" class="ax" text-anchor="middle">2024</text>
+</svg>
+<figcaption><span class="lg all"></span>전체 <span class="lg girl"></span>여학생 <span class="lg boy"></span>남학생 · 단위 %</figcaption>
+</figure>
+<p class="note">자료: 교육부·질병관리청 「청소년건강행태조사」, 청소년정책분석평가센터 통계 재구성. 우울감 경험률 = 최근 12개월 동안 2주 내내 일상생활을 중단할 정도로 슬프거나 절망감을 느낀 분율.</p>
+<div class="card">
+<p><strong>읽는 법</strong></p>
+<ul>
+<li>2006년 41.4% → 2015년 23.6%까지 <strong>큰 폭으로 개선</strong>. 2000년대 후반~2010년대 중반 정책·학교 안전망이 일정 부분 작동한 시기다.</li>
+<li>2016년 이후 <strong>반등</strong>해 2019년 28.2%, 이후 27~29%대에 머문다.</li>
+<li><strong>성별 격차는 줄지 않았다.</strong> 여학생은 거의 모든 해에 남학생보다 10%p 안팎 높다.</li>
+</ul>
+</div>
+</section>
+
+<section id="s2">
+<h2><span class="no">02</span>2000~2026 시기별 추이</h2>
+
+<div class="card">
+<h3>2-1. 2000~2009 · 기준선을 처음 측정하다</h3>
+<ul>
+<li><strong>발병 연령의 발견</strong>: 정신장애의 절반이 14세까지, 4분의 3이 24세까지 시작(Kessler 2005). 정신건강 정책의 무게중심이 성인에서 아동·청소년으로 이동하는 근거.</li>
+<li><strong>자해·자살의 정의 정리</strong>: 자해를 '죽을 의도 없는 신체 손상'으로 정의, 청소년·청년에 집중(Nock 2010). 유전·정신과적 문제·가족·사회·문화·미디어 전염이 위험요인으로 정리(Hawton 2012).</li>
+<li><strong>국내 제도 정비</strong>: Wee클래스·Wee센터·청소년상담복지센터·정신보건센터가 자리잡았으나, 2012년 연구가 이미 "사업 중복, 상담 외 서비스 부재, 선별주의, 예산 부족"이라고 진단(문성호·김혜리 2012).</li>
+<li><strong>기준선</strong>: 세계 아동·청소년 정신장애 13.4%, 자살생각 평생 18%, 비자살적 자해 평생 22.1%(Polanczyk 2015; Lim 2019). 자해 유병률은 2012년까지 뚜렷한 상승이 확인되지 않음(Muehlenkamp 2012).</li>
+</ul>
+<p class="note">→ 문제의 크기를 처음 측정한 시기. 유병률은 이미 높았지만 상승 추세는 아직 뚜렷하지 않았다.</p>
+</div>
+
+<div class="card">
+<h3>2-2. 2010~2019 · 스마트폰·학업경쟁, 여아에서 시작된 반전</h3>
+<ul>
+<li><strong>2012년 전후 변곡</strong>: 미국 8·10·12학년 우울 증상이 1991~2011년 감소하다 2012년부터 상승해 2018년 정점. 연령이 아니라 <strong>시기(period) 효과</strong>(Keyes 2019). 12~17세 주요우울삽화 8.7%→13.2%(+52%), 18~25세 2009~2017년 +63%(Twenge 2019).</li>
+<li><strong>영국의 대조</strong>: 14세 코호트 2005 vs 2015 — 우울 9.0%→14.8%, 자해 11.8%→14.4%. 그런데 흡연 시도 9.2%→2.9%, 음주 시도 52.1%→43.5%로 <strong>감소</strong>(Patalay &amp; Gage 2019).</li>
+<li><strong>여아 신호의 일관성</strong>: 2009 vs 2014 잉글랜드에서도 여아 정서문제만 유의 증가(Fink 2015). 19개 연구 검토도 "유아·아동은 악화 없음, 청소년 여아 내현화만 증가"(Bor 2014).</li>
+<li><strong>진료와 유병률의 괴리</strong>: 임상 진단·치료는 늘었지만 인구집단의 ADHD 유병률 상승 근거는 뚜렷하지 않음(Collishaw 2015).</li>
+<li><strong>국내</strong>: 2015년 이후 우울·자살지표 재상승(Kim H 2023). 학교밖 청소년은 심리변인보다 <strong>경제상태</strong>가, 자살시도는 <strong>유명인 자살보도</strong>가 유의(정익중 외 2010).</li>
+<li><strong>디지털 논쟁</strong>: 문제적 스마트폰 사용 23.3%, 우울 OR 3.17·불안 OR 3.05(Sohn 2019). 반면 디지털 사용의 안녕감 설명력은 최대 0.4%(Orben 2019).</li>
+</ul>
+<p class="note">→ 증가의 시작이자 원인 논쟁의 시작. 증가는 여아·내현화에서 먼저, 가장 뚜렷하게 나타났다.</p>
+</div>
+
+<div class="card">
+<h3>2-3. 2020~2022 · 코로나19, 첫해의 착시와 2년차 악화</h3>
+<ul>
+<li><strong>첫해는 좋아 보였다</strong>: 2020년 우울감 25.2%, 추세 예상보다 우울 −13%·자살시도 −40%(Kim H 2023). 2019→2020년 우울 aOR 0.86, 자살생각 0.80, 스트레스 0.76(Park B 2023).</li>
+<li><strong>2년차 반등</strong>: 2020→2021년 우울 aOR 1.06, 자살생각 1.15, 스트레스 1.19(Park B 2023).</li>
+<li><strong>국제 규모</strong>: 팬데믹 첫해 임상 수준 우울 25.2%, 불안 20.5%(Racine 2021). 격리·외로움의 영향은 최대 9년 후까지, <strong>강도보다 지속기간</strong>이 중요(Loades 2020).</li>
+<li><strong>격리의 직접 효과</strong>: 61개 연구 54,999명 — 불안 1.8~49.5%, 우울 2.2~63.8%. 특수교육 대상·기존 정신과 질환·과도한 미디어 노출이 위험요인(Panchal 2023).</li>
+<li><strong>계층 격차</strong>: 2022년 최저소득층 스트레스 62.8%·자살생각 31.7% vs 최고소득층 40.1%·13.9%(Cho 2024).</li>
+<li><strong>외로움의 부상</strong>: '항상 외롭다' 3.0%, 이들의 자살생각 52.6%(OR 30.7), 우울 OR 32.5(송인명 2023).</li>
+</ul>
+<p class="note">→ 팬데믹은 새 문제를 만든 것이 아니라 진행 중이던 악화를 가속하고, 계층·관계 자원에 따라 다르게 때렸다.</p>
+</div>
+
+<div class="card">
+<h3>2-4. 2023~2026.11 · 지표는 내려가는데 사망은 오른다</h3>
+<ul>
+<li><strong>자기보고 지표</strong>: 자살생각·계획·시도가 2012~2019년 감소 → 2020~2022년 증가 → 2023~2025년 재감소. 2025년 자살생각 16.24%, 계획 6.18%, 시도 4.03%. 15세 이하·여성에서 높음(Byun 2026).</li>
+<li><strong>사망 지표</strong>: 2025년 10대 자살률 8.6명, 10대 사망의 51.2%가 자살(류정희 2026).</li>
+<li><strong>국제 비교</strong>: 2001~2023년 한국은 모든 연령·성별 집단에서 자살률 상승, 여성 급증(2015~2023 청소년 APC 10.91, 청년 7.42). 미국·캐나다는 감소·정체(Oh 2025).</li>
+<li><strong>응급실</strong>: 10~24세 정신건강 응급실 방문 4,737건(2017)→8,787건(2021), 성인은 정체. 여성 67.1%, 의도적 자해 26.9%, 기분장애 43.2%(Park H 2025).</li>
+<li><strong>ADHD</strong>: 6~29세 발생률 0.85→2.02(팬데믹 전→중), SARS-CoV-2 감염이 위험요인(Song 2025). 2008~2018년 소아청소년 1.47배·성인 10.1배(Seo 2022).</li>
+<li><strong>청년</strong>: 사회신뢰↓→우울↑(박채림·한창근 2023), 1인가구 고립감→우울 고위험(최성수 외 2023), 문제음주→우울·불안→자살위험(유성호 외 2024).</li>
+<li><strong>도움요청 단절</strong>: 문해력은 정신의료·심리상담 이용으로 이어지지만, 지역사회·온라인 상담은 '의도'에서 끊김(박지혜·이선혜 2020).</li>
+</ul>
+<p class="note">→ '지표상 회복'과 '사망·응급·진료 증가'가 동시에 나타나는 분기 국면.</p>
+</div>
+</section>
+
+<section id="s3">
+<h2><span class="no">03</span>생애주기별 비교</h2>
+<div class="grid2">
+<div class="card">
+<h3>아동 (0~12세)</h3>
+<ul>
+<li>인구 수준의 뚜렷한 악화는 확인되지 않음(Bor 2014; Fink 2015).</li>
+<li>경계선지능 아동은 예외적으로 취약: 공존 정신장애 약 40%, 불안 22%, 품행 25%, 입원 경험 19~22%, 입원 빈도 3.4배(김민애·천근아 2024).</li>
+<li>ADHD 유병률 533.3→783.4/10만(2008→2018), 78.7%가 공존질환(Seo 2022).</li>
+</ul>
+<p class="note">→ 유병률보다 <strong>발견·진단</strong>의 문제. 발병 정점 14.5세(Solmi 2022)를 고려하면 아동기 후반 선별이 결정적.</p>
+</div>
+<div class="card">
+<h3>청소년 (재학)</h3>
+<ul>
+<li>2006~2015년 개선 → 2016년 반등 → 팬데믹 2년차 악화 → 2023~2025년 소폭 회복.</li>
+<li>자살생각 22.6%(2005)→10.9%(2020)→16.24%(2025). 자살시도 4.7%→2.0%→4.03%.</li>
+<li>여학생 우울감이 10%p 안팎 높고, 스트레스는 50% 안팎.</li>
+</ul>
+<p class="note">→ 학교라는 게이트웨이는 있지만, 자살위기 개입의 전담기구·인력·협력 체계는 없다(김진선 외 2023).</p>
+</div>
+<div class="card">
+<h3>학교 밖 청소년</h3>
+<ul>
+<li>자살시도 7.8% vs 재학 2.7%(약 2.9배), 자살생각 21.1% vs 11.6%.</li>
+<li>위험 구조가 다름: 경제상태(자살생각), 유명인 자살보도(자살시도)(정익중 외 2010).</li>
+<li>자해·자살생각 4개 잠재집단, 자해는 가족·학교 요인, 자살위험은 우울 등 내적 요인(김동현·신나은 2024).</li>
+<li>학업중단 직후 심리정서가 가장 나쁘고 이후 완만히 회복(하여진 2022).</li>
+<li>Wee–꿈드림 연계 미작동, 개인정보 관리 불안정(송원일·박선영 2020).</li>
+</ul>
+<p class="note">→ 학교를 떠나는 순간 지원 주체·법·데이터가 모두 바뀐다. 국내 체계의 가장 큰 구멍.</p>
+</div>
+<div class="card">
+<h3>청년 (19~29/34세)</h3>
+<ul>
+<li>25세 이전 발병 62.5%, 정점 14.5세(Solmi 2022). 24세까지 4분의 3이 발병(Kessler 2005).</li>
+<li>사회신뢰 하락→우울 상승(박채림·한창근 2023), 고립감→우울 고위험(최성수 외 2023), 문제음주→자살위험(유성호 외 2024).</li>
+<li>20~29세 자살률 2001~2023년 상승, 여성에서 특히 가파름(Oh 2025).</li>
+<li>지역사회·온라인 서비스는 '의도'에서 끊김(박지혜·이선혜 2020).</li>
+</ul>
+<p class="note">→ 학교도, 청소년상담복지센터(9~24세)도, 노인복지도 아닌 <strong>제도적 틈</strong>에 있다.</p>
+</div>
+</div>
+</section>
+
+<section id="s4">
+<h2><span class="no">04</span>위험요인의 전환</h2>
+<div class="tablewrap"><table>
+<tr><th>시기</th><th>중심 위험요인</th><th>대표 근거</th></tr>
+<tr><td>2000년대</td><td>학업 스트레스, 가정불화, 또래 갈등, 유명인 자살보도</td><td>정익중 외 2010; Hawton 2012; Nock 2010</td></tr>
+<tr><td>2010년대 전반</td><td>여아 내현화, 학업경쟁, 사회경제적 격차</td><td>Bor 2014; Fink 2015; 문성호·김혜리 2012</td></tr>
+<tr><td>2010년대 후반</td><td>스마트폰·SNS 과의존, 수면 감소, 외로움</td><td>Twenge 2019; Keyes 2019; Sohn 2019; Orben 2019</td></tr>
+<tr><td>2020~2022</td><td>격리·관계 단절, 가족 외 거주, 저소득, 미디어 과노출</td><td>Loades 2020; Racine 2021; Park B 2023; Cho 2024</td></tr>
+<tr><td>2023~2026</td><td>외로움·고립의 만성화, 약물·도박, ADHD·신경다양성, 복합위기</td><td>Byun 2026; Song 2025; 김동현·신나은 2024; 김민애·천근아 2024</td></tr>
+</table></div>
+<div class="grid2">
+<div class="card"><h3>① 단일 원인 → 누적 취약성</h3><p>디지털 사용의 설명력은 최대 0.4%(Orben 2019). 그러나 외로움의 지속, 수면 부족, 가정 외 거주, 저소득이 겹칠 때 위험이 커진다. '스마트폰이 원인'이라는 단정은 근거가 약하다.</p></div>
+<div class="card"><h3>② 사건 → 상태의 만성화</h3><p>과거에는 학업·가정 갈등 같은 사건이 위기를 촉발했다면, 최근에는 외로움이 <strong>상태</strong>로 굳어지며 자살생각을 30배까지 끌어올린다(송인명 2023).</p></div>
+<div class="card"><h3>③ 행동문제 → 정서·신경발달</h3><p>비자의입원 사유에서 행동문제 2.51배, 정서문제 1.83배(류정희 2026). ADHD 발생률은 팬데믹기에 2배 이상(Song 2025).</p></div>
+<div class="card"><h3>④ 개인 → 관계·사회</h3><p>사회신뢰(박채림·한창근 2023), 1인가구 고립(최성수 외 2023), 또래·가족 스트레스가 개인 취약성만큼 중요해졌다.</p></div>
+</div>
+</section>
+
+<section id="s5">
+<h2><span class="no">05</span>지원체계의 한계와 No Wrong Door</h2>
+<h3>5-1. 25년간 반복된 같은 진단</h3>
+<div class="tablewrap"><table>
+<tr><th>연도</th><th>진단</th><th>근거</th></tr>
+<tr><td>2012</td><td>3중 전달체계, 사업 중복, 상담 위주, 선별주의, 예산 부족</td><td>문성호·김혜리</td></tr>
+<tr><td>2018</td><td>도움이 필요한 고2의 <strong>71% 미이용</strong>, 이용자의 26.2% 중복이용</td><td>고은주 외</td></tr>
+<tr><td>2020</td><td>Wee–꿈드림 연계 미작동, 개인정보 관리 불안정</td><td>송원일·박선영</td></tr>
+<tr><td>2023</td><td>자살위기 전담기구 부재, 인력·전문성 부족, 협력 미비</td><td>김진선 외</td></tr>
+<tr><td>2026</td><td>교육·보건·복지 병렬 구조, 의뢰 지연, 사례관리 중복, 정보공유 제한, 사후관리 약화</td><td>김남혁·김성수</td></tr>
+</table></div>
+
+<h3>5-2. 왜 '문'이 문제인가</h3>
+<ul>
+<li><strong>입구가 학교에 몰려 있다</strong> — 학교 밖 자살시도율이 2.9배 높은데, 학교를 나가면 입구가 사라진다.</li>
+<li><strong>연령 경계가 아이를 자른다</strong> — 청소년상담복지센터는 9~24세, 학생 마음건강법안은 재학생 중심. <strong>9세 미만 학교 밖 아동</strong>은 어느 쪽에도 없다.</li>
+<li><strong>위기 이후가 없다</strong> — 응급실 방문은 5년 새 2배 가까이 늘었지만(Park H 2025), 퇴원 후 사후관리 프로토콜이 없다.</li>
+<li><strong>치료 공급이 없다</strong> — 아동정신건강복지센터 4개소, 서울 초진 대기 3개월 이상.</li>
+<li><strong>복합 문제는 '특수욕구'로 분리된다</strong> — ADHD·경계선지능을 별도 범주로 떼면, 복합 문제를 가진 아이는 다시 어느 문에도 맞지 않는다.</li>
+</ul>
+
+<h3>5-3. 해외 모델의 공통 원리</h3>
+<div class="tablewrap"><table>
+<tr><th>국가</th><th>모델</th><th>핵심</th></tr>
+<tr><td>영국</td><td>학교 기반 정신건강지원팀 + 11~25세 예약 없는 조기지원 허브</td><td>학교 안과 밖 입구를 동시에</td></tr>
+<tr><td>호주</td><td>headspace(12~25세) + 상위 전문돌봄 단계</td><td>학교가 아닌 <strong>연령</strong> 기준</td></tr>
+<tr><td>핀란드</td><td>학교보건·학생복지 통합, 필요 확인 후 4주 내 심리치료 보장</td><td>발견과 치료 사이 대기 시간을 법으로 규율</td></tr>
+</table></div>
+<blockquote><p>입구는 여러 갈래로 열되, 지원은 <strong>소속이 아니라 위기 수준</strong>에 따라 하나의 체계로 묶는다. 이것이 'No Wrong Door'의 작동 방식이다.</p></blockquote>
+
+<h3>5-4. 한국에 주는 4가지 시사점</h3>
+<ol>
+<li><strong>입구를 연령 기준으로 재설계</strong> — 재학 여부가 아니라 9~24세(또는 6~29세) 연령대에 보편적 창구를 두고, 학교는 그 창구 중 하나로.</li>
+<li><strong>위기 수준별 3단계</strong> — 보편 예방(1차)·조기발견·상담·치료(2차)·긴급대응·집중치료(3차). 한 단계의 공백은 앞뒤 단계의 부담으로 돌아온다.</li>
+<li><strong>의뢰·회송·사후관리 프로토콜 법제화</strong> — 표준 의뢰 기준, 공통 기록체계, 단계별 주관기관, 퇴원 후 사후관리(김남혁·김성수 2026).</li>
+<li><strong>컨트롤타워와 재원</strong> — 부처 간 조정 권한과 예산 조정 기능, 학교 밖·지역 보편 예방 인프라의 안정적 재원.</li>
+</ol>
+</section>
+
+<section id="s6">
+<h2><span class="no">06</span>검증된 선행논문 46편</h2>
+<p class="note">각 항목을 누르면 저자·저널·핵심 지표·요약·한계·원문 링크가 펼쳐진다. 구분은 <strong>연구 자료의 국가</strong> 기준(국내 = 한국 자료, 국외 = 해외 자료)이다.</p>
+<div class="filters" id="f">
+  <button class="on" data-f="all">전체 46</button>
+  <button data-f="국내">국내 24</button>
+  <button data-f="국외">국외 22</button>
+</div>
+<div id="papers">
+<details class="paper" data-g="국내">
+  <summary><span class="num">01</span><span class="py">2010</span><span class="pt">학교청소년과 학교밖 청소년의 자살생각과 자살시도에 영향을 미치는 요인</span><span class="badge 국내">국내</span></summary>
+  <div class="pbody">
+    <p class="meta">정익중, 박재연, 김은영 · <span class="jn">정신보건과 사회사업, 34, 222-251</span> · 대상: 청소년(재학·학교밖)</p>
+    <p class="kpi"><strong>핵심 지표 변화</strong><br>재학생 4,076명 vs 학교밖(쉼터·소년원) 423명 비교. 재학생은 우울·충동성·친구갈등이, 학교밖은 경제상태가 자살생각에 유의. 유명인 자살보도는 학교밖 자살시도에 유의</p>
+    <p>같은 시기 학교 안팎 청소년의 자살위험 요인이 다르다는 점을 실증한 국내 초기 비교연구다. 학교밖 청소년은 심리적 변인보다 빈곤·경제적 취약성이 자살생각을 설명했고, 미디어 자살보도 노출이 자살시도와 연결됐다. 이후 학교밖 청소년 지원이 경제·주거 지원과 함께 가야 한다는 근거로 반복 인용된다.</p>
+    <p class="lim"><strong>한계</strong> 횡단 자기보고 설문이며, 학교밖 표본이 청소년쉼터·소년원 중심이어서 거리생활 청소년은 포함하지 못했다.</p>
+    <p class="link"><a href="https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART001440215" target="_blank" rel="noopener">원문·서지 보기 →</a></p>
+  </div>
+</details><details class="paper" data-g="국내">
+  <summary><span class="num">02</span><span class="py">2012</span><span class="pt">청소년 정신건강 정책사업의 현황 및 향후 과제</span><span class="badge 국내">국내</span></summary>
+  <div class="pbody">
+    <p class="meta">문성호, 김혜리 · <span class="jn">청소년학연구, 19(10), 143-166</span> · 대상: 청소년</p>
+    <p class="kpi"><strong>핵심 지표 변화</strong><br>청소년상담복지센터·Wee센터·정신보건센터 3중 전달체계 비교: 서비스 중복·획일(상담 중심), 선별주의 대상 선정, 예산 부족</p>
+    <p>2010년대 초 청소년 정신건강 정책을 수행하는 세 기관의 대상·서비스·인력·예산을 비교해, 기관별 사업이 겹치고 상담 외 서비스가 거의 없으며 대상은 선별주의적으로 좁혀져 있음을 보였다. 보편적 대상 설정과 기관 간 연계·협력 강화, 인력 보상, 예산 확대를 과제로 제시했다. 이후 15년간 반복되는 &#x27;분절된 전달체계&#x27; 진단의 출발점이 된 연구다.</p>
+    <p class="lim"><strong>한계</strong> 기관 공시자료와 문헌에 기반한 현황 분석으로, 서비스 이용자의 실제 결과(outcome)나 종단적 효과를 검증하지는 않았다.</p>
+    <p class="link"><a href="https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART001707910" target="_blank" rel="noopener">원문·서지 보기 →</a></p>
+  </div>
+</details><details class="paper" data-g="국내">
+  <summary><span class="num">03</span><span class="py">2015</span><span class="pt">중등학교 Wee클래스 운영의 발전적 방안 연구: 상담자의 역할을 중심으로</span><span class="badge 국내">국내</span></summary>
+  <div class="pbody">
+    <p class="meta">이지연, 조희연, 이영아 · <span class="jn">청소년시설환경, 13(3), 167-175</span> · 대상: 청소년</p>
+    <p class="kpi"><strong>핵심 지표 변화</strong><br>Wee클래스 운영 실태: 상담보다 행정·연계 업무 비중 확대, 담당자 1인 다역, 학교 관료제와의 갈등, 정서적 소진</p>
+    <p>학교 내 정신건강 게이트웨이인 Wee클래스가 상담 기능보다 행정·연계·사례관리 업무에 끌려가면서 전문상담 인력이 소진되는 구조를 포커스그룹 인터뷰로 드러냈다. 상담 본연의 기능을 회복하려면 학교 관리자·교직원의 협력과 교내외 네트워크가 필요하다고 제안했다.</p>
+    <p class="lim"><strong>한계</strong> 상담 전문가 6명 대상 포커스그룹 연구로, 학교급·지역별 차이를 일반화하기 어렵다.</p>
+    <p class="link"><a href="https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART002025755" target="_blank" rel="noopener">원문·서지 보기 →</a></p>
+  </div>
+</details><details class="paper" data-g="국내">
+  <summary><span class="num">04</span><span class="py">2018</span><span class="pt">고등학생의 정신건강서비스 이용에 영향을 미치는 요인</span><span class="badge 국내">국내</span></summary>
+  <div class="pbody">
+    <p class="meta">고은주, 장소현, 배은주 · <span class="jn">청소년학연구, 25(7), 33-65</span> · 대상: 청소년</p>
+    <p class="kpi"><strong>핵심 지표 변화</strong><br>도움이 필요하다고 응답한 고2 학생의 71%가 정신건강서비스를 이용하지 못함. 이용자의 26.2%는 2개 이상 기관 중복이용</p>
+    <p>한 지역 고2 2,613명을 Andersen·Newman 의료행동모델로 분석해, 필요를 인식하면서도 서비스에 닿지 못하는 &#x27;서비스 갭&#x27;과 소수에 집중되는 중복이용이 동시에 존재함을 보였다. 기관 인지도와 주변인 관계, 도움이 필요한 문제의 수가 이용을 좌우했다.</p>
+    <p class="lim"><strong>한계</strong> 1개 시(市) 고2만 대상으로 한 단면조사여서 전국 대표성이 없고, 학교밖·저연령 청소년은 빠져 있다.</p>
+    <p class="link"><a href="https://doi.org/10.21509/kjys.2018.07.25.7.33" target="_blank" rel="noopener">원문·서지 보기 →</a></p>
+  </div>
+</details><details class="paper" data-g="국내">
+  <summary><span class="num">05</span><span class="py">2020</span><span class="pt">청년의 정신건강 리터러시와 도움요청 행동: 도움요청에 관한 낙인, 태도, 의도의 매개효과 분석</span><span class="badge 국내">국내</span></summary>
+  <div class="pbody">
+    <p class="meta">박지혜, 이선혜 · <span class="jn">한국사회복지학, 72(4), 63-92</span> · 대상: 청년</p>
+    <p class="kpi"><strong>핵심 지표 변화</strong><br>20대 411명. 정신건강 리터러시는 정신의료·심리상담 이용 경로에서 유의, 지역사회 정신건강서비스·온라인/전화상담은 &#x27;의도&#x27;까지만 유의하고 실제 이용으로 이어지지 않음</p>
+    <p>청년의 정신건강 문해력이 실제 도움요청으로 이어지는 경로를 네 가지 서비스별로 나눠 검증했다. 의료·심리치료는 문해력이 낙인과 태도를 거쳐 이용으로 연결됐지만, 지역사회 서비스와 온라인 상담은 의도 단계에서 끊겼다. 청년 대상 서비스가 &#x27;아는 것&#x27;과 &#x27;닿는 것&#x27; 사이에서 새고 있음을 보여준다.</p>
+    <p class="lim"><strong>한계</strong> 2019년 말 온라인 설문(411명)에 기반한 횡단 구조모형으로, 실제 이용 행동은 자기보고에 의존한다.</p>
+    <p class="link"><a href="https://doi.org/10.20970/kasw.2020.72.4.003" target="_blank" rel="noopener">원문·서지 보기 →</a></p>
+  </div>
+</details><details class="paper" data-g="국내">
+  <summary><span class="num">06</span><span class="py">2020</span><span class="pt">Wee센터와 학교 밖 청소년 지원센터 간 효율적 연계 운영방안</span><span class="badge 국내">국내</span></summary>
+  <div class="pbody">
+    <p class="meta">송원일, 박선영 · <span class="jn">다문화아동청소년연구, 5(3), 57-86</span> · 대상: 청소년(학교밖)</p>
+    <p class="kpi"><strong>핵심 지표 변화</strong><br>경기도 Wee센터·꿈드림센터 실무자 심층면접: 두 기관 간 연계는 활발하지 않음, 개인정보 부정확·불안전 관리, 기능 재편과 사안별 연계 필요</p>
+    <p>학교를 떠나는 순간 지원 주체가 바뀌는 지점에서 Wee센터와 꿈드림센터가 실제로는 거의 연결되지 않고 있음을 현장 인터뷰로 확인했다. 대상 확대에 따른 기능 재편, 사안별 협력, 상호 직접 연계를 3대 전략으로 제시했다.</p>
+    <p class="lim"><strong>한계</strong> 경기도 지역 실무자 대상 질적 연구로, 다른 시도나 중앙 정책 수준의 연계 구조는 다룰 수 없었다.</p>
+    <p class="link"><a href="https://doi.org/10.56023/mcyca.2019.5.3.3" target="_blank" rel="noopener">원문·서지 보기 →</a></p>
+  </div>
+</details><details class="paper" data-g="국내">
+  <summary><span class="num">07</span><span class="py">2022</span><span class="pt">학교 밖 청소년의 부정적 심리정서 발달양상과 지원방안: 종단연구</span><span class="badge 국내">국내</span></summary>
+  <div class="pbody">
+    <p class="meta">하여진 · <span class="jn">청소년복지연구, 24(4), 1-22</span> · 대상: 청소년(학교밖)</p>
+    <p class="kpi"><strong>핵심 지표 변화</strong><br>학업중단 청소년 패널 1~5차(2013-2017). 학업중단 후 부정적 심리정서는 시간에 따라 선형 감소, 미래기대와 부모학대가 초기 수준을 결정</p>
+    <p>학교밖 청소년의 우울·불안 등 부정적 심리정서가 학업중단 직후 가장 높고 이후 완만히 낮아지는 궤적을 잠재성장모형으로 확인했다. 미래기대가 낮고 부모학대가 높을수록 초기 수준이 높았고, 미래기대의 감소 속도가 심리정서 악화 속도를 예측했다. 학업중단 초기 집중 개입의 근거다.</p>
+    <p class="lim"><strong>한계</strong> 자기보고 패널자료 5년치로, 학업중단 이후 5년을 넘는 장기 궤적과 서비스 개입 효과는 확인하지 못했다.</p>
+    <p class="link"><a href="https://doi.org/10.19034/kayw.2022.24.4.01" target="_blank" rel="noopener">원문·서지 보기 →</a></p>
+  </div>
+</details><details class="paper" data-g="국내">
+  <summary><span class="num">08</span><span class="py">2022</span><span class="pt">Prevalence and Comorbidities of Attention Deficit Hyperactivity Disorder Among Adults and Children/Adolescents in Korea</span><span class="badge 국내">국내</span></summary>
+  <div class="pbody">
+    <p class="meta">Seo JC, Jon DI, Shim SH, Sung HM, Woo YS · <span class="jn">Clinical Psychopharmacology and Neuroscience, 20(1), 126-134</span> · 대상: 아동·청소년</p>
+    <p class="kpi"><strong>핵심 지표 변화</strong><br>건강보험심사평가원 2008-2018. ADHD 유병률 127.1→192.9/10만. 소아청소년(≤18세) 533.3→783.4/10만(1.47배), 성인은 10.1배. 소아청소년 ADHD 환자의 78.7%가 1개 이상 정신과 공존질환</p>
+    <p>국민건강보험 청구자료 11년치로 ADHD 진단 유병률 추이를 산출했다. 소아청소년 유병률은 1.47배 증가에 그친 반면 성인은 10배로 늘어, 청소년기 이후 &#x27;성인 ADHD&#x27;로 이어지는 진단·치료의 연속성 문제를 보여준다. 소아청소년 환자의 4분의 3 이상이 다른 정신과 질환을 함께 갖고 있었다.</p>
+    <p class="lim"><strong>한계</strong> 진단·처방 청구 기록에 기반해, 의료기관을 찾지 않은 환자는 빠지므로 실제 유병률보다 낮게 잡힐 수 있다.</p>
+    <p class="link"><a href="https://doi.org/10.9758/cpn.2022.20.1.126" target="_blank" rel="noopener">원문·서지 보기 →</a></p>
+  </div>
+</details><details class="paper" data-g="국내">
+  <summary><span class="num">09</span><span class="py">2023</span><span class="pt">한국청소년의 자살생각 및 우울감의 위험요인으로서의 외로움, 2020-2021년</span><span class="badge 국내">국내</span></summary>
+  <div class="pbody">
+    <p class="meta">송인명 · <span class="jn">산업융합학회논문지, 21(5), 77-85</span> · 대상: 청소년</p>
+    <p class="kpi"><strong>핵심 지표 변화</strong><br>2020·2021 청소년건강행태조사 109,796명. &#x27;항상 외롭다&#x27; 3.0%, 자살생각 11.8%, 우울감 26.0%. 항상 외로운 청소년의 자살생각 52.6%(OR 30.7), 우울감 OR 32.5</p>
+    <p>코로나19 기간 국내 청소년 표본에서 외로움이 자살생각과 우울감의 가장 강력한 위험요인임을 확인했다. 외로움 빈도가 높을수록 위험이 계단식으로 커져, &#x27;항상 외로운&#x27; 집단의 절반 이상이 자살을 생각했다. 관계 단절을 정신건강 지표로 직접 감시해야 한다는 근거다.</p>
+    <p class="lim"><strong>한계</strong> 횡단 자기보고 자료로 외로움과 자살생각의 시간적 선후를 가릴 수 없고, 재학생만 포함한다.</p>
+    <p class="link"><a href="https://doi.org/10.22678/jic.2023.21.5.077" target="_blank" rel="noopener">원문·서지 보기 →</a></p>
+  </div>
+</details><details class="paper" data-g="국내">
+  <summary><span class="num">10</span><span class="py">2023</span><span class="pt">사회 신뢰가 청년의 우울에 미치는 영향: 성별 차이를 중심으로</span><span class="badge 국내">국내</span></summary>
+  <div class="pbody">
+    <p class="meta">박채림, 한창근 · <span class="jn">보건사회연구, 43(1), 141-156</span> · 대상: 청년</p>
+    <p class="kpi"><strong>핵심 지표 변화</strong><br>19~34세 3,018명. 사회신뢰 1점 상승 시 우울 감소(B=-.456). 여성에서 효과가 더 큼(여 -.603 vs 남 -.337)</p>
+    <p>청년층 생활실태 조사로 사회에 대한 신뢰가 청년 우울을 낮추는 보호요인임을 보였고, 그 효과가 여성 청년에게 유독 크다는 점을 확인했다. 청년 정신건강을 개인 상담만으로 다룰 수 없고, 사회참여·연대와 고용 차별 해소가 함께 가야 함을 시사한다.</p>
+    <p class="lim"><strong>한계</strong> 2019년 11월~2020년 1월 단일 시점 횡단자료로, 코로나19 이후 신뢰와 우울의 관계 변화는 반영하지 못했다.</p>
+    <p class="link"><a href="https://doi.org/10.15709/hswr.2023.43.1.141" target="_blank" rel="noopener">원문·서지 보기 →</a></p>
+  </div>
+</details><details class="paper" data-g="국내">
+  <summary><span class="num">11</span><span class="py">2023</span><span class="pt">청년 1인가구의 인지된 고립감이 우울 및 주관적 안녕감에 미치는 영향</span><span class="badge 국내">국내</span></summary>
+  <div class="pbody">
+    <p class="meta">최성수, 이영주, 박소정 · <span class="jn">한국웰니스학회지, 18(4), 217-224</span> · 대상: 청년</p>
+    <p class="kpi"><strong>핵심 지표 변화</strong><br>2021 청년사회·경제실태조사 18~34세 1인가구 514명. 고립감이 높을수록 우울 고위험군·낮은 주관적 안녕감에 속할 확률 증가</p>
+    <p>그동안 노인 중심이던 고립·우울 연구를 청년 1인가구로 옮겨, 인지된 고립감이 우울과 안녕감에 독립적으로 작용함을 보였다. 1인가구 청년의 관계망 형성을 정책 대상으로 삼아야 한다는 근거다.</p>
+    <p class="lim"><strong>한계</strong> 1인가구 514명의 단면 분석으로, 고립감과 우울의 인과 방향은 확인할 수 없다.</p>
+    <p class="link"><a href="https://doi.org/10.21097/ksw.2023.11.18.4.217" target="_blank" rel="noopener">원문·서지 보기 →</a></p>
+  </div>
+</details><details class="paper" data-g="국내">
+  <summary><span class="num">12</span><span class="py">2023</span><span class="pt">한국 청소년의 스마트폰 과의존 영향요인: 건강 및 건강행태 특성을 중심으로</span><span class="badge 국내">국내</span></summary>
+  <div class="pbody">
+    <p class="meta">박숙경 · <span class="jn">인문사회21, 14(2), 2567-2582</span> · 대상: 청소년</p>
+    <p class="kpi"><strong>핵심 지표 변화</strong><br>2021 청소년건강행태조사. 성별·학교유형·경제상태·학업성적·우울경험·외로움·주관적 건강·평생 흡연·음주 경험이 스마트폰 과의존의 영향요인</p>
+    <p>전국 대표 표본에서 스마트폰 과의존이 우울·외로움·건강행태와 함께 묶여 나타남을 확인했다. 과의존을 개인의 의지 문제가 아니라 정신건강·가정환경과 결합된 복합 건강위험으로 다뤄야 한다는 근거다.</p>
+    <p class="lim"><strong>한계</strong> 단면 자기보고 조사로 과의존과 정신건강의 인과 방향을 가릴 수 없다.</p>
+    <p class="link"><a href="https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART002953300" target="_blank" rel="noopener">원문·서지 보기 →</a></p>
+  </div>
+</details><details class="paper" data-g="국내">
+  <summary><span class="num">13</span><span class="py">2023</span><span class="pt">자살위기 학생 개입 경험에 관한 질적 연구: 위(Wee)센터를 중심으로</span><span class="badge 국내">국내</span></summary>
+  <div class="pbody">
+    <p class="meta">김진선, 정윤경, 이민정, 신주연 · <span class="jn">교육연구논총, 41(4), 1-28</span> · 대상: 청소년</p>
+    <p class="kpi"><strong>핵심 지표 변화</strong><br>Wee센터·교육청·학교·유관기관 담당자 18명 면담. 4차원 9범주: 자살위기개입 전담기구 부재, 인력·전문성 부족, 보호자·관리자·유관기관 협력 미비, 프로그램·매뉴얼·교육 부족</p>
+    <p>학교 중심 자살위기 개입이 실제로는 전담 조직 없이 개인 역량에 의존하고, 위기 학생을 병원·지역으로 넘기는 절차가 작동하지 않음을 현장 목소리로 정리했다. 담당자 소진과 보호자 협력 실패가 반복되는 구조적 문제로 제시됐다.</p>
+    <p class="lim"><strong>한계</strong> 질적 내용분석으로, 지역·학교급별 편차와 개입 결과의 효과를 수치로 제시하지는 않는다.</p>
+    <p class="link"><a href="https://doi.org/10.22327/kei.2023.41.4.001" target="_blank" rel="noopener">원문·서지 보기 →</a></p>
+  </div>
+</details><details class="paper" data-g="국내">
+  <summary><span class="num">14</span><span class="py">2023</span><span class="pt">National trends in suicide-related behaviors among youths between 2005-2020, including COVID-19: a Korean representative survey of one million adolescents</span><span class="badge 국내">국내</span></summary>
+  <div class="pbody">
+    <p class="meta">Kim N, Song JY, Yang H, Kim MJ, Lee K, Shin YH 등 · <span class="jn">European Review for Medical and Pharmacological Sciences, 27(3), 1192-1202</span> · 대상: 청소년</p>
+    <p class="kpi"><strong>핵심 지표 변화</strong><br>청소년건강행태조사 1,057,885명. 슬픔·절망 38.0%(2005-08)→25.0%(2020), 자살생각 21.9→10.7%, 자살시도 5.0→1.9%. 코로나19 기간 하락 기울기 둔화</p>
+    <p>16년치 전국 표본으로 자살 관련 지표의 장기 하향 추세와 코로나19기의 추세 이탈을 함께 추정했다. 전체적으로는 줄었지만 감소 속도가 팬데믹기에 꺾였고, 팬데믹 이전 추세만 보고 2020년을 해석하면 위험을 놓칠 수 있음을 보여준다.</p>
+    <p class="lim"><strong>한계</strong> 재학생만 포함해 학교밖 청소년의 높은 자살시도율이 빠졌고, 자해와 자살시도의 구분 기준이 응답자마다 달라질 수 있다.</p>
+    <p class="link"><a href="https://doi.org/10.26355/eurrev_202302_31226" target="_blank" rel="noopener">원문·서지 보기 →</a></p>
+  </div>
+</details><details class="paper" data-g="국내">
+  <summary><span class="num">15</span><span class="py">2023</span><span class="pt">Changes in mental health of Korean adolescents before and during the COVID-19 pandemic: a special report using the Korea Youth Risk Behavior Survey</span><span class="badge 국내">국내</span></summary>
+  <div class="pbody">
+    <p class="meta">Park B, Kim J, Yang J, Choi S, Oh K · <span class="jn">Epidemiology and Health, 45, e2023019</span> · 대상: 청소년</p>
+    <p class="kpi"><strong>핵심 지표 변화</strong><br>2018-2021 청소년 227,139명. 2020년은 2019년보다 우울 aOR 0.86·자살생각 0.80·스트레스 0.76으로 낮았으나, 2021년은 2020년보다 우울 1.06·자살생각 1.15·스트레스 1.19로 높아짐</p>
+    <p>팬데믹 첫해의 &#x27;지연된 신고 효과&#x27;와 2년차의 악화를 분리해 보여준 질병관리청 공식 분석이다. 2020년에는 지표가 오히려 좋아졌지만 2021년에 반등해, 팬데믹 영향은 단기 비교로 판단하면 안 된다는 점을 명확히 했다. 가족과 함께 살지 않는 청소년, 저소득, 주관적 건강이 나쁜 집단에서 위험이 컸다.</p>
+    <p class="lim"><strong>한계</strong> 2018-2021년 4년치 비교로 팬데믹 이후 회복 여부는 다루지 못했고, 지표는 단일문항 자기보고다.</p>
+    <p class="link"><a href="https://doi.org/10.4178/epih.e2023019" target="_blank" rel="noopener">원문·서지 보기 →</a></p>
+  </div>
+</details><details class="paper" data-g="국내">
+  <summary><span class="num">16</span><span class="py">2023</span><span class="pt">Trends in Depressive Symptoms and Suicidality of South Korean Adolescents: Comparison of Expected and Observed Prevalence During the COVID-19 Pandemic</span><span class="badge 국내">국내</span></summary>
+  <div class="pbody">
+    <p class="meta">Kim H, Lee YJ, Jung SJ · <span class="jn">Journal of Adolescent Health, 73(1), 79-87</span> · 대상: 청소년</p>
+    <p class="kpi"><strong>핵심 지표 변화</strong><br>2005-2020 청소년 1,035,382명. 우울감 29.9%(2005)→25.2%(2020), 자살생각 22.6→10.9%, 자살시도 4.7→2.0%. 2020년 실제값은 추세 예상치보다 우울 13%·자살생각 20%·자살시도 40% 낮음</p>
+    <p>joinpoint 회귀로 15년 추세를 먼저 추정한 뒤 2020년 값을 &#x27;추세 대비&#x27;로 비교한 연구다. 2015년 이후 우울·자살지표가 다시 오르던 추세였고, 팬데믹 첫해에는 예상보다 낮게 나타났다. 추세 자체가 우상향이었다는 점이 이후 반등의 배경이 된다.</p>
+    <p class="lim"><strong>한계</strong> 단일문항 자기보고이고 재학생만 대상이어서, 학교밖 청소년의 변화는 별도로 봐야 한다.</p>
+    <p class="link"><a href="https://doi.org/10.1016/j.jadohealth.2023.02.014" target="_blank" rel="noopener">원문·서지 보기 →</a></p>
+  </div>
+</details><details class="paper" data-g="국내">
+  <summary><span class="num">17</span><span class="py">2024</span><span class="pt">학교 밖 청소년의 비자살적 자해 및 자살생각 잠재계층 분류와 예측</span><span class="badge 국내">국내</span></summary>
+  <div class="pbody">
+    <p class="meta">김동현, 신나은 · <span class="jn">청소년복지연구, 26(2), 27-53</span> · 대상: 청소년(학교밖)</p>
+    <p class="kpi"><strong>핵심 지표 변화</strong><br>10대 청소년 정신건강 실태조사 학교밖 청소년 752명. 고위험·자해위험·저위험·자살위험 4개 잠재집단. 우울·자아존중감·학대·방임·학업중단 이전 학교적응이 집단을 구분</p>
+    <p>학교밖 청소년의 자해와 자살생각이 같은 집단에서만 나타나는 것이 아니라 서로 다른 조합으로 갈라진다는 점을 잠재계층분석으로 보였다. 자해에는 가족·학교 요인이, 자살위험에는 우울 등 내적 요인이 상대적으로 작용해 개입 지점이 다르다.</p>
+    <p class="lim"><strong>한계</strong> 횡단 자료의 잠재계층 분류이므로 집단의 시간적 이동(전이)은 확인하지 못했다.</p>
+    <p class="link"><a href="https://doi.org/10.19034/kayw.2024.26.2.02" target="_blank" rel="noopener">원문·서지 보기 →</a></p>
+  </div>
+</details><details class="paper" data-g="국내">
+  <summary><span class="num">18</span><span class="py">2024</span><span class="pt">Exploring the Clinical Characteristics and Comorbid Disorders of Borderline Intellectual Functioning</span><span class="badge 국내">국내</span></summary>
+  <div class="pbody">
+    <p class="meta">김민애, 천근아 · <span class="jn">Journal of the Korean Academy of Child and Adolescent Psychiatry, 35(3), 181-187</span> · 대상: 아동·청소년</p>
+    <p class="kpi"><strong>핵심 지표 변화</strong><br>경계선지능(BIF) 아동의 약 40%가 1개 이상 공존 정신장애. 불안 22%, 품행장애 25%. 정신과 입원 경험 19~22%, 입원 빈도는 일반 인구의 3.4배</p>
+    <p>경계선지능 아동·청소년이 정서적 어려움과 공존질환, 낮은 자존감, 학교 불안을 겪지만 진단과 지원에서 사각지대에 놓여 있음을 국내 임상 관점에서 정리했다. 정신건강 문제가 외래 관리로 감당되지 않아 입원으로 밀리는 구조를 보여준다.</p>
+    <p class="lim"><strong>한계</strong> 문헌고찰(리뷰)로 국내 실태를 대표하는 유병률 수치를 새로 산출하지는 않았다.</p>
+    <p class="link"><a href="https://doi.org/10.5765/jkacap.240012" target="_blank" rel="noopener">원문·서지 보기 →</a></p>
+  </div>
+</details><details class="paper" data-g="국내">
+  <summary><span class="num">19</span><span class="py">2024</span><span class="pt">National trends in adolescents&#x27; mental health by income level in South Korea, pre- and post-COVID-19, 2006-2022</span><span class="badge 국내">국내</span></summary>
+  <div class="pbody">
+    <p class="meta">Cho J, Park J, Lee H, Jo H, Lee S, Kim HJ 등 · <span class="jn">Scientific Reports, 14, 25021</span> · 대상: 청소년</p>
+    <p class="kpi"><strong>핵심 지표 변화</strong><br>2006-2022 청소년 1,138,804명. 2022년 최저소득층 스트레스 62.8%·슬픔 46.8%·자살생각 31.7%·자살시도 10.5% vs 최고소득층 40.1%·28.2%·13.9%·3.4%. 팬데믹 중 전 지표 증가</p>
+    <p>17년치 전국 자료를 소득 5분위로 나눠 정신건강 격차의 추이를 보여준다. 모든 지표에서 저소득층이 2~3배 높았고, 팬데믹을 지나며 증가폭도 컸다. 같은 &#x27;청소년 위기&#x27;라도 계층에 따라 전혀 다른 크기의 위기임을 보여준다.</p>
+    <p class="lim"><strong>한계</strong> 자기보고 단일문항 지표이고, 소득은 가구 소득 구간 응답에 기반해 실제 소득과 어긋날 수 있다.</p>
+    <p class="link"><a href="https://doi.org/10.1038/s41598-024-74073-5" target="_blank" rel="noopener">원문·서지 보기 →</a></p>
+  </div>
+</details><details class="paper" data-g="국내">
+  <summary><span class="num">20</span><span class="py">2025</span><span class="pt">Trends in Mental Health-Related Emergency Department Visits Among Adolescents and Young Adults: A Nationwide, Population-Based Study in Korea, 2017-2021</span><span class="badge 국내">국내</span></summary>
+  <div class="pbody">
+    <p class="meta">Park H, Oh MR, Roh EH, Huh YJ, Hong SI, Kim YJ, Kim WY · <span class="jn">Journal of Korean Medical Science, 40(47), e316</span> · 대상: 청소년·청년</p>
+    <p class="kpi"><strong>핵심 지표 변화</strong><br>전국 응급실 정보망 117,997명. 10-24세 정신건강 관련 응급실 방문 4,737(2017)→8,787(2021)로 증가, 성인(25세 이상)은 16,798→16,313으로 정체. 여성 67.1%, 의도적 자해 26.9%, 기분장애 43.2%</p>
+    <p>청소년·청년의 정신건강 위기가 외래가 아니라 응급실에서 처음 드러나는 경로가 급증했음을 전국 자료로 보여준다. 같은 기간 성인 방문은 그대로여서, 증가가 인구구조가 아니라 세대 특성임을 시사한다. 응급실 이후 지역·외래로 이어지는 사후관리 공백이 핵심 문제로 남는다.</p>
+    <p class="lim"><strong>한계</strong> 응급실 진료 기록 기반으로, 응급실을 찾지 않은 위기와 입원 이후 결과는 알 수 없다.</p>
+    <p class="link"><a href="https://doi.org/10.3346/jkms.2025.40.e316" target="_blank" rel="noopener">원문·서지 보기 →</a></p>
+  </div>
+</details><details class="paper" data-g="국내">
+  <summary><span class="num">21</span><span class="py">2025</span><span class="pt">Temporal trends in suicide among adolescents and young adults in the United States, Canada, and South Korea: 2001-2023</span><span class="badge 국내">국내</span></summary>
+  <div class="pbody">
+    <p class="meta">Oh S, Do R, Kim S · <span class="jn">Preventive Medicine, 200, 108399</span> · 대상: 청소년·청년</p>
+    <p class="kpi"><strong>핵심 지표 변화</strong><br>한국은 10-19세·20-29세 모든 집단에서 자살률 상승, 여성 급증(2015-2023 청소년 APC 10.91, 청년 7.42). 미국·캐나다는 전반적 감소 또는 정체(캐나다 청소년 여성만 AAPC 2.04 증가)</p>
+    <p>같은 기간 세 나라의 자살 사망 추세를 성별·연령별로 비교해, 한국만 모든 집단에서 상승하고 특히 젊은 여성의 증가가 가파르다는 점을 확인했다. 자살 추세는 한 국가의 문화·정책 맥락에 크게 좌우되므로 국제 평균으로 국내 상황을 대체할 수 없다.</p>
+    <p class="lim"><strong>한계</strong> 사망신고 통계 기반으로, 자살 판정의 국가 간 차이와 방법(method) 변화를 완전히 통제하지 못했다.</p>
+    <p class="link"><a href="https://doi.org/10.1016/j.ypmed.2025.108399" target="_blank" rel="noopener">원문·서지 보기 →</a></p>
+  </div>
+</details><details class="paper" data-g="국내">
+  <summary><span class="num">22</span><span class="py">2025</span><span class="pt">Increasing incidence of ADHD among children, adolescents and young adults: COVID-19 pandemic-driven trend in Korea (2012-2023)</span><span class="badge 국내">국내</span></summary>
+  <div class="pbody">
+    <p class="meta">Song J, Park SJ, Jeong S, Chun AY, Park SM · <span class="jn">BMJ Mental Health, 28(1), e301662</span> · 대상: 아동·청소년·청년</p>
+    <p class="kpi"><strong>핵심 지표 변화</strong><br>6-29세 전 국민 코호트. ADHD 발생률 0.85(팬데믹 전)→2.02(팬데믹 중). SARS-CoV-2 감염이 위험요인으로 확인</p>
+    <p>진단과 처방이 함께 있는 경우를 &#x27;발생&#x27;으로 정의해 2012-2023년 ADHD 발생률을 추정했다. 팬데믹기에 예측치를 넘는 급증이 있었고, 감염력이 위험요인으로 나타나 원격수업·생활 리듬 붕괴와 신경면역 변화 가능성을 논의했다. ADHD 진료 증가가 단순 &#x27;과잉진단&#x27;만은 아닐 수 있음을 보여준다.</p>
+    <p class="lim"><strong>한계</strong> 청구자료 기반의 조작적 정의(진단+처방)에 의존해, 의료기관을 찾지 않은 경우와 진단 관행 변화의 영향을 완전히 분리하기 어렵다.</p>
+    <p class="link"><a href="https://doi.org/10.1136/bmjment-2025-301662" target="_blank" rel="noopener">원문·서지 보기 →</a></p>
+  </div>
+</details><details class="paper" data-g="국내">
+  <summary><span class="num">23</span><span class="py">2026</span><span class="pt">Long-term trends in suicidal ideation, suicide plan, and suicide attempt among adolescents in South Korea, 2012-2025</span><span class="badge 국내">국내</span></summary>
+  <div class="pbody">
+    <p class="meta">Byun S, Kim MS, Kim K, Kim HJ, Nehs CJ, Pizzol D, Smith L, Yon DK, Kang J · <span class="jn">Journal of Affective Disorders, 414, 122286</span> · 대상: 청소년</p>
+    <p class="kpi"><strong>핵심 지표 변화</strong><br>2012-2025 청소년건강행태조사. 자살생각·계획·시도 모두 팬데믹 전(2012-2019) 감소→팬데믹기(2020-2022) 증가→팬데믹 후(2023-2025) 재감소. 2025년 자살생각 16.24%, 계획 6.18%, 시도 4.03%. 15세 이하와 여성에서 높음</p>
+    <p>2025년까지 포함한 가장 최근의 전국 추이 분석으로, &#x27;팬데믹 후 회복&#x27;이 지표상으로는 진행 중임을 보여준다. 다만 2025년 자살생각 16%대는 여전히 높고, 어린 연령과 여성에서 위험이 집중된다. 자살사망률(2025년 10대 8.6명)과 자기보고 지표가 서로 다른 방향을 가리키는 지점에 주목해야 한다.</p>
+    <p class="lim"><strong>한계</strong> 자기보고이고 재학생만 포함해, 자살사망 통계와의 격차와 학교밖 청소년은 별도 해석이 필요하다.</p>
+    <p class="link"><a href="https://doi.org/10.1016/j.jad.2026.122286" target="_blank" rel="noopener">원문·서지 보기 →</a></p>
+  </div>
+</details><details class="paper" data-g="국내">
+  <summary><span class="num">24</span><span class="py">2026</span><span class="pt">청소년 정신건강서비스 전달체계의 연계성과 책임성: 다부처 집행구조에 대한 정책문헌 분석과 사례연구의 통합</span><span class="badge 국내">국내</span></summary>
+  <div class="pbody">
+    <p class="meta">김남혁, 김성수 · <span class="jn">보건행정학회지, 36(3), 307-319</span> · 대상: 청소년</p>
+    <p class="kpi"><strong>핵심 지표 변화</strong><br>2000-2026 법령·정책자료·선행연구 + 기존 사례연구 12편 통합. 교육·보건·청소년복지의 병렬 구조, 전문기관 의뢰 지연, 사례관리 주체 중복·불명확, 정보공유 제한, 인력·조정역량 부족, 위기 이후 사후관리 약화</p>
+    <p>25년간의 정책문헌과 현장 사례를 함께 분석해, 청소년 정신건강 서비스의 문제가 개별 기관의 자원 부족이 아니라 다부처 조정 실패라는 점을 구조적으로 정리했다. 표준화된 의뢰·회송, 공통 기록체계, 단계별 주관기관, 사후관리 프로토콜, 지역 조정기구가 갖춰질 때 연계가 안정된다는 근거를 제시한다.</p>
+    <p class="lim"><strong>한계</strong> 정책문헌과 기존 사례연구를 통합한 2차 분석으로, 새로운 실증조사나 서비스 효과 평가는 포함하지 않는다.</p>
+    <p class="link"><a href="https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003388190" target="_blank" rel="noopener">원문·서지 보기 →</a></p>
+  </div>
+</details><details class="paper" data-g="국외">
+  <summary><span class="num">25</span><span class="py">2005</span><span class="pt">Lifetime prevalence and age-of-onset distributions of DSM-IV disorders in the National Comorbidity Survey Replication</span><span class="badge 국외">국외</span></summary>
+  <div class="pbody">
+    <p class="meta">Kessler RC, Berglund P, Demler O, Jin R, Merikangas KR, Walters EE · <span class="jn">Archives of General Psychiatry, 62(6), 593-602</span> · 대상: 아동·청소년·청년</p>
+    <p class="kpi"><strong>핵심 지표 변화</strong><br>평생 유병률 46.4%(불안 28.8%, 기분 20.8%, 충동조절 24.8%). 전체 정신장애의 절반이 14세까지, 4분의 3이 24세까지 시작. 불안·충동조절장애 중앙 발병연령 11세</p>
+    <p>정신장애가 성인이 되어 생기는 것이 아니라 아동·청소년기에 집중적으로 시작된다는 사실을 대규모 역학자료로 확립한 연구다. 이후 &#x27;청년기 이전 개입&#x27;이라는 정책 언어의 근거가 됐고, 최근의 발병연령 메타분석(Solmi 2022)으로 이어진다.</p>
+    <p class="lim"><strong>한계</strong> 미국 단일 국가의 단면 회상조사로, 회상 편향과 최근 코호트의 유병률 차이를 통제하기 어렵다.</p>
+    <p class="link"><a href="https://doi.org/10.1001/archpsyc.62.6.593" target="_blank" rel="noopener">원문·서지 보기 →</a></p>
+  </div>
+</details><details class="paper" data-g="국외">
+  <summary><span class="num">26</span><span class="py">2010</span><span class="pt">Self-Injury</span><span class="badge 국외">국외</span></summary>
+  <div class="pbody">
+    <p class="meta">Nock MK · <span class="jn">Annual Review of Clinical Psychology, 6, 339-363</span> · 대상: 청소년·청년</p>
+    <p class="kpi"><strong>핵심 지표 변화</strong><br>비자살적 자해는 청소년·청년에서 가장 유병률이 높고, 주로 피부 긋기·새기기 형태. 국가 간에도 비교적 일관된 양상. 자해는 자살과 구분되지만 자살시도의 강력한 예측요인</p>
+    <p>자해를 &#x27;죽을 의도 없는 신체 손상&#x27;으로 정의하고, 유병률·위험요인·이론모형을 정리해 이후 15년 자해 연구의 기준틀을 세웠다. 자해가 청소년기에 집중되고 자살과 다른 기제를 가지면서도 서로 겹친다는 점을 강조했다.</p>
+    <p class="lim"><strong>한계</strong> 서술적 문헌고찰로, 당시 연구들의 측정도구 이질성 때문에 통합 유병률 추정은 제시하지 않는다.</p>
+    <p class="link"><a href="https://doi.org/10.1146/annurev.clinpsy.121208.131258" target="_blank" rel="noopener">원문·서지 보기 →</a></p>
+  </div>
+</details><details class="paper" data-g="국외">
+  <summary><span class="num">27</span><span class="py">2012</span><span class="pt">International prevalence of adolescent non-suicidal self-injury and deliberate self-harm</span><span class="badge 국외">국외</span></summary>
+  <div class="pbody">
+    <p class="meta">Muehlenkamp JJ, Claes L, Havertape L, Plener PL · <span class="jn">Child and Adolescent Psychiatry and Mental Health, 6, 10</span> · 대상: 청소년</p>
+    <p class="kpi"><strong>핵심 지표 변화</strong><br>52개 연구 메타분석. 비자살적 자해(NSSI) 평균 유병률 18.0%, 고의적 자해(DSH) 16.1%. 단일문항 측정이 체크리스트보다 낮은 유병률. 최근 5년간 유병률 상승은 확인되지 않음</p>
+    <p>국가를 가로질러 청소년 자해 유병률이 16~18% 수준임을 정리하고, 측정 방식이 유병률을 크게 좌우한다는 방법론적 경고를 남겼다. 이 시점까지는 자해 유병률의 뚜렷한 상승 추세가 확인되지 않았다는 점은, 이후 자해 증가를 해석할 때 기준선이 된다.</p>
+    <p class="lim"><strong>한계</strong> 측정도구와 표본 정의가 다른 연구들을 묶어 평균을 낸 것으로, 국가·시기별 추세를 직접 비교하기는 어렵다.</p>
+    <p class="link"><a href="https://doi.org/10.1186/1753-2000-6-10" target="_blank" rel="noopener">원문·서지 보기 →</a></p>
+  </div>
+</details><details class="paper" data-g="국외">
+  <summary><span class="num">28</span><span class="py">2014</span><span class="pt">Are child and adolescent mental health problems increasing in the 21st century? A systematic review</span><span class="badge 국외">국외</span></summary>
+  <div class="pbody">
+    <p class="meta">Bor W, Dean AJ, Najman J, Hayatbakhsh R · <span class="jn">Australian &amp; New Zealand Journal of Psychiatry, 48(7), 606-616</span> · 대상: 아동·청소년</p>
+    <p class="kpi"><strong>핵심 지표 변화</strong><br>19개 연구 검토. 유아·아동의 최근 코호트에서는 악화 없음. 청소년의 외현화 문제는 안정적. 다만 청소년 여아의 내현화 문제 증가를 다수 연구가 보고</p>
+    <p>2000년대 초반까지 &#x27;아이들의 정신건강이 나빠지고 있다&#x27;는 통념을 체계적으로 검토해, 악화가 전 연령·전 문제에 걸친 것이 아니라 청소년 여아의 내현화(우울·불안) 문제에 집중돼 있음을 보였다. 이후 성별·문제유형을 나눠 추세를 봐야 한다는 연구 관행을 만들었다.</p>
+    <p class="lim"><strong>한계</strong> 2014년 이전 발표 연구로 한정돼 스마트폰 대중화(2012년 이후)와 코로나19 이후 변화는 포함하지 않는다.</p>
+    <p class="link"><a href="https://doi.org/10.1177/0004867414533834" target="_blank" rel="noopener">원문·서지 보기 →</a></p>
+  </div>
+</details><details class="paper" data-g="국외">
+  <summary><span class="num">29</span><span class="py">2015</span><span class="pt">Annual Research Review: Secular trends in child and adolescent mental health</span><span class="badge 국외">국외</span></summary>
+  <div class="pbody">
+    <p class="meta">Collishaw S · <span class="jn">Journal of Child Psychology and Psychiatry, 56(3), 370-393</span> · 대상: 아동·청소년</p>
+    <p class="kpi"><strong>핵심 지표 변화</strong><br>임상 진단·치료율은 최근 수십 년간 증가. 동일 척도로 비교한 인구집단 코호트에서는 ADHD 유병률 상승 근거가 뚜렷하지 않음. 고소득 국가에서 정서문제·반사회행동의 뚜렷한 시대적 변동(증가와 감소 모두)</p>
+    <p>&#x27;진료 증가&#x27;와 &#x27;실제 유병률 증가&#x27;를 구분해야 한다는 핵심 구분을 제시한 리뷰다. 진단·치료 접근성과 인식이 좋아진 부분을 걷어내면, 인구 수준의 변화는 문제 유형별로 엇갈린다. 정책 지표로 진료량을 쓸 때의 한계를 분명히 한다.</p>
+    <p class="lim"><strong>한계</strong> 고소득 국가 연구에 치우쳐 있고, 저·중소득 국가 근거는 거의 없다고 저자도 인정한다.</p>
+    <p class="link"><a href="https://doi.org/10.1111/jcpp.12372" target="_blank" rel="noopener">원문·서지 보기 →</a></p>
+  </div>
+</details><details class="paper" data-g="국외">
+  <summary><span class="num">30</span><span class="py">2015</span><span class="pt">Annual Research Review: A meta-analysis of the worldwide prevalence of mental disorders in children and adolescents</span><span class="badge 국외">국외</span></summary>
+  <div class="pbody">
+    <p class="meta">Polanczyk GV, Salum GA, Sugaya LS, Caye A, Rohde LA · <span class="jn">Journal of Child Psychology and Psychiatry, 56(3), 345-365</span> · 대상: 아동·청소년</p>
+    <p class="kpi"><strong>핵심 지표 변화</strong><br>27개국 41개 연구. 아동·청소년 정신장애 세계 유병률 13.4%. 불안장애 6.5%, 우울장애 2.6%, ADHD 3.4%, 파괴적 행동장애 5.7%</p>
+    <p>세계 아동·청소년의 약 8명 중 1명이 정신장애를 겪는다는 기준선을 제시한 메타분석이다. 지역 간 차이는 유의하지 않았고, 표본 대표성·진단면접 방식이 유병률 추정을 좌우했다.</p>
+    <p class="lim"><strong>한계</strong> 연구 간 이질성이 크고, 2015년까지 발표된 연구로 이후 팬데믹·디지털 환경 변화는 반영하지 않는다.</p>
+    <p class="link"><a href="https://doi.org/10.1111/jcpp.12381" target="_blank" rel="noopener">원문·서지 보기 →</a></p>
+  </div>
+</details><details class="paper" data-g="국외">
+  <summary><span class="num">31</span><span class="py">2015</span><span class="pt">Mental Health Difficulties in Early Adolescence: A Comparison of Two Cross-Sectional Studies in England From 2009 to 2014</span><span class="badge 국외">국외</span></summary>
+  <div class="pbody">
+    <p class="meta">Fink E, Patalay P, Sharpe H, Holley S, Deighton J, Wolpert M · <span class="jn">Journal of Adolescent Health, 56(5), 502-507</span> · 대상: 청소년</p>
+    <p class="kpi"><strong>핵심 지표 변화</strong><br>11-13세 3,366명(2009 vs 2014, 성향점수 매칭). 전체 어려움 수준은 유사. 다만 여아의 정서문제 유의 증가, 남아의 총어려움 감소</p>
+    <p>같은 척도(SDQ)로 5년 간격을 두고 비교해, &#x27;전체적으로 나빠졌다&#x27;는 서술이 성별에 따라 갈린다는 점을 보였다. 여아 정서문제 증가는 다른 국가 연구와 일치하는 신호였다.</p>
+    <p class="lim"><strong>한계</strong> 잉글랜드 단일 지역 표본이고 5년 간격이라, 2012년 이후 스마트폰 확산기의 변화를 길게 보지는 못한다.</p>
+    <p class="link"><a href="https://doi.org/10.1016/j.jadohealth.2015.01.023" target="_blank" rel="noopener">원문·서지 보기 →</a></p>
+  </div>
+</details><details class="paper" data-g="국외">
+  <summary><span class="num">32</span><span class="py">2016</span><span class="pt">National Trends in the Prevalence and Treatment of Depression in Adolescents and Young Adults</span><span class="badge 국외">국외</span></summary>
+  <div class="pbody">
+    <p class="meta">Mojtabai R, Olfson M, Han B · <span class="jn">Pediatrics, 138(6), e20161878</span> · 대상: 청소년·청년</p>
+    <p class="kpi"><strong>핵심 지표 변화</strong><br>미국 2005-2014. 12-17세 주요우울삽화 12개월 유병률 8.7%→11.3%. 청년층도 증가. 같은 기간 우울 치료율은 거의 변화 없음</p>
+    <p>우울 유병률은 늘었는데 치료는 따라가지 못해 &#x27;치료받지 않는 우울&#x27;이 증가했음을 보여준다. 이후 미국 청소년 우울 증가 논쟁의 기준점이 된 연구다.</p>
+    <p class="lim"><strong>한계</strong> 자기보고 진단 면접에 기반하고, 2014년까지로 한정돼 이후 급증기와 팬데믹은 다루지 않는다.</p>
+    <p class="link"><a href="https://doi.org/10.1542/peds.2016-1878" target="_blank" rel="noopener">원문·서지 보기 →</a></p>
+  </div>
+</details><details class="paper" data-g="국외">
+  <summary><span class="num">33</span><span class="py">2018</span><span class="pt">Trends in depression prevalence in the USA from 2005 to 2015: widening disparities in vulnerable groups</span><span class="badge 국외">국외</span></summary>
+  <div class="pbody">
+    <p class="meta">Weinberger AH, Gbedemah M, Martinez AM, Nash D, Galea S, Goodwin RD · <span class="jn">Psychological Medicine, 48(8), 1308-1315</span> · 대상: 청소년·청년</p>
+    <p class="kpi"><strong>핵심 지표 변화</strong><br>미국 2005-2015 우울 유병률 유의 증가. 청년층의 증가 속도가 모든 고연령 집단보다 유의하게 빠름. 저소득층·고학력·고소득층 등 취약집단에서 증가 두드러짐</p>
+    <p>우울 증가가 인구 전체의 균일한 현상이 아니라 세대와 계층에 따라 다르게 진행됐음을 보였다. 특히 젊은 층의 증가 기울기가 가장 가파라, 이후 세대 효과 논의의 근거가 됐다.</p>
+    <p class="lim"><strong>한계</strong> 단면조사 반복으로 코호트 효과와 시기 효과를 완전히 분리하지 못한다.</p>
+    <p class="link"><a href="https://doi.org/10.1017/S0033291717002781" target="_blank" rel="noopener">원문·서지 보기 →</a></p>
+  </div>
+</details><details class="paper" data-g="국외">
+  <summary><span class="num">34</span><span class="py">2019</span><span class="pt">Age, period, and cohort trends in mood disorder indicators and suicide-related outcomes in a nationally representative dataset, 2005-2017</span><span class="badge 국외">국외</span></summary>
+  <div class="pbody">
+    <p class="meta">Twenge JM, Cooper AB, Joiner TE, Duffy ME, Binau SG · <span class="jn">Journal of Abnormal Psychology, 128(3), 185-199</span> · 대상: 청소년·청년</p>
+    <p class="kpi"><strong>핵심 지표 변화</strong><br>미국 611,880명. 12-17세 주요우울삽화 8.7%(2005)→13.2%(2017)로 52% 증가. 18-25세는 2009-2017년 63% 증가(8.1→13.2%). 심각한 심리적 고통·자살 관련 결과도 증가</p>
+    <p>연령·시기·코호트 효과를 분해해, 우울과 자살 관련 지표의 증가가 특정 연령이 아니라 최근 출생 코호트에서 나타나는 현상임을 보였다. 청소년·청년 정신건강 증가 논쟁을 국제적으로 촉발한 대표 연구다.</p>
+    <p class="lim"><strong>한계</strong> 자기보고 조사이고, 증가 원인(디지털 미디어·수면·사회적 요인)을 직접 식별하지는 못한다.</p>
+    <p class="link"><a href="https://doi.org/10.1037/abn0000410" target="_blank" rel="noopener">원문·서지 보기 →</a></p>
+  </div>
+</details><details class="paper" data-g="국외">
+  <summary><span class="num">35</span><span class="py">2019</span><span class="pt">Recent increases in depressive symptoms among US adolescents: trends from 1991 to 2018</span><span class="badge 국외">국외</span></summary>
+  <div class="pbody">
+    <p class="meta">Keyes KM, Gary D, O&#x27;Malley PM, Hamilton A, Schulenberg J · <span class="jn">Social Psychiatry and Psychiatric Epidemiology, 54(8), 987-996</span> · 대상: 청소년</p>
+    <p class="kpi"><strong>핵심 지표 변화</strong><br>미국 8·10·12학년 1991-2018. 여아 우울 증상은 1991-2011년 감소 후 반전, 2018년 정점. 증가는 주로 시기(period) 효과로, 2012년부터 점진 증가</p>
+    <p>28년 장기 시계열로 보면 청소년 우울은 계속 늘어난 것이 아니라 2010년대 초에 방향이 바뀌었다는 점을 보여준다. 여아에서 뚜렷한 반전이 나타나 성별 격차가 확대됐다.</p>
+    <p class="lim"><strong>한계</strong> 미국 재학생 표본이고, 2012년 이후 반전의 원인을 특정하지는 못한다.</p>
+    <p class="link"><a href="https://doi.org/10.1007/s00127-019-01697-8" target="_blank" rel="noopener">원문·서지 보기 →</a></p>
+  </div>
+</details><details class="paper" data-g="국외">
+  <summary><span class="num">36</span><span class="py">2019</span><span class="pt">The association between adolescent well-being and digital technology use</span><span class="badge 국외">국외</span></summary>
+  <div class="pbody">
+    <p class="meta">Orben A, Przybylski AK · <span class="jn">Nature Human Behaviour, 3(2), 173-182</span> · 대상: 청소년</p>
+    <p class="kpi"><strong>핵심 지표 변화</strong><br>3개 대규모 데이터(n=355,358) specification curve 분석. 디지털 기술 사용과 청소년 안녕감의 연관은 부(-)이지만 최대 0.4% 설명력에 그침</p>
+    <p>디지털 사용이 청소년 정신건강 악화의 주원인이라는 주장에 방법론적 반론을 제기한 연구다. 연관은 존재하지만 효과 크기가 매우 작아 정책 전환의 근거로 삼기 어렵다고 결론냈다. 이후 스마트폰 원인론 논쟁의 양쪽에서 인용된다.</p>
+    <p class="lim"><strong>한계</strong> 횡단 상관자료로 인과를 말할 수 없고, 사용 &#x27;시간&#x27; 중심 측정이라 콘텐츠·이용방식의 영향을 포착하지 못한다.</p>
+    <p class="link"><a href="https://doi.org/10.1038/s41562-018-0506-1" target="_blank" rel="noopener">원문·서지 보기 →</a></p>
+  </div>
+</details><details class="paper" data-g="국외">
+  <summary><span class="num">37</span><span class="py">2019</span><span class="pt">Global Lifetime and 12-Month Prevalence of Suicidal Behavior, Deliberate Self-Harm and Non-Suicidal Self-Injury in Children and Adolescents between 1989 and 2018: A Meta-Analysis</span><span class="badge 국외">국외</span></summary>
+  <div class="pbody">
+    <p class="meta">Lim KS, Wong CH, McIntyre RS, Wang J, Zhang Z, Tran BX 등 · <span class="jn">International Journal of Environmental Research and Public Health, 16(22), 4581</span> · 대상: 청소년</p>
+    <p class="kpi"><strong>핵심 지표 변화</strong><br>686,672명 메타분석. 자살시도 평생 6%·12개월 4.5%, 자살계획 평생 9.9%·12개월 7.5%, 자살생각 평생 18%·12개월 14.2%, 비자살적 자해 평생 22.1%·12개월 19.5%</p>
+    <p>1989-2018년 전 세계 아동·청소년 자살·자해 유병률을 통합한 기준선이다. 자살생각 18%, 자해 22%라는 수치는 &#x27;특별한 아이들의 문제&#x27;가 아니라 집단 수준의 공중보건 문제임을 보여준다.</p>
+    <p class="lim"><strong>한계</strong> 국가별 연구 수와 측정도구 편차가 커 이질성이 높고, 대부분 고소득·중소득 국가 자료에 치우친다.</p>
+    <p class="link"><a href="https://doi.org/10.3390/ijerph16224581" target="_blank" rel="noopener">원문·서지 보기 →</a></p>
+  </div>
+</details><details class="paper" data-g="국외">
+  <summary><span class="num">38</span><span class="py">2019</span><span class="pt">Prevalence of problematic smartphone usage and associated mental health outcomes amongst children and young people: a systematic review, meta-analysis and GRADE of the evidence</span><span class="badge 국외">국외</span></summary>
+  <div class="pbody">
+    <p class="meta">Sohn SY, Rees P, Wildridge B, Kalk NJ, Carter B · <span class="jn">BMC Psychiatry, 19, 356</span> · 대상: 아동·청소년</p>
+    <p class="kpi"><strong>핵심 지표 변화</strong><br>41,871명. 문제적 스마트폰 사용 중앙 유병률 23.3%. 우울 OR 3.17, 불안 OR 3.05, 지각된 스트레스 OR 1.86, 수면의 질 저하 OR 2.60</p>
+    <p>아동·청소년 4명 중 1명 수준의 문제적 스마트폰 사용과 우울·불안·스트레스·수면문제의 강한 연관을 정리했다. 다만 근거 등급(GRADE)은 낮아 인과 해석에는 주의가 필요하다고 명시했다.</p>
+    <p class="lim"><strong>한계</strong> 횡단 연구 중심으로 역인과(우울→과사용) 가능성을 배제할 수 없고, 근거 수준이 낮다.</p>
+    <p class="link"><a href="https://doi.org/10.1186/s12888-019-2350-x" target="_blank" rel="noopener">원문·서지 보기 →</a></p>
+  </div>
+</details><details class="paper" data-g="국외">
+  <summary><span class="num">39</span><span class="py">2019</span><span class="pt">Changes in millennial adolescent mental health and health-related behaviours over 10 years: a population cohort comparison study</span><span class="badge 국외">국외</span></summary>
+  <div class="pbody">
+    <p class="meta">Patalay P, Gage SH · <span class="jn">International Journal of Epidemiology, 48(5), 1650-1664</span> · 대상: 청소년</p>
+    <p class="kpi"><strong>핵심 지표 변화</strong><br>영국 14세 코호트 2005 vs 2015. 우울증상 9.0%→14.8%, 자해 11.8%→14.4%. 부모보고 정서·행동·또래문제도 증가(5.7-8.9%→9.7-17.7%). 반면 흡연 시도 9.2→2.9%, 음주 시도 52.1→43.5%로 감소</p>
+    <p>같은 연령의 두 세대를 비교해 우울·자해는 늘고 음주·흡연·비행은 줄어드는 &#x27;비대칭 변화&#x27;를 보였다. 물질사용 감소에도 정신건강이 나빠졌다는 점에서, 기존 위험요인 설명이 더 이상 통하지 않음을 시사한다.</p>
+    <p class="lim"><strong>한계</strong> 두 코호트의 표본 설계가 달라 성향점수 보정을 했지만 잔여 교란 가능성이 있고, 영국 단일 국가다.</p>
+    <p class="link"><a href="https://doi.org/10.1093/ije/dyz006" target="_blank" rel="noopener">원문·서지 보기 →</a></p>
+  </div>
+</details><details class="paper" data-g="국외">
+  <summary><span class="num">40</span><span class="py">2020</span><span class="pt">Rapid Systematic Review: The Impact of Social Isolation and Loneliness on the Mental Health of Children and Adolescents in the Context of COVID-19</span><span class="badge 국외">국외</span></summary>
+  <div class="pbody">
+    <p class="meta">Loades ME, Chatburn E, Higson-Sweeney N, Reynolds S, Shafran R 등 · <span class="jn">Journal of the American Academy of Child &amp; Adolescent Psychiatry, 59(11), 1218-1239</span> · 대상: 아동·청소년</p>
+    <p class="kpi"><strong>핵심 지표 변화</strong><br>80개 연구, 건강한 아동·청소년 51,576명. 사회적 고립·외로움이 우울 위험을 높이고 불안 위험도 높일 가능성. 외로움은 측정 시점부터 0.25~9년 후까지 영향. 강도보다 지속기간이 더 강하게 연관</p>
+    <p>코로나19 격리 상황을 예측하기 위해 기존 고립·외로움 연구를 빠르게 종합했다. 외로움의 &#x27;강도&#x27;보다 &#x27;얼마나 오래&#x27;가 정신건강에 더 중요하다는 발견은 장기 격리·은둔 청소년 지원의 핵심 근거가 된다.</p>
+    <p class="lim"><strong>한계</strong> 포함 연구의 비뚤림 위험이 높고, 대부분 횡단연구여서 인과 추론에는 제한이 있다.</p>
+    <p class="link"><a href="https://doi.org/10.1016/j.jaac.2020.05.009" target="_blank" rel="noopener">원문·서지 보기 →</a></p>
+  </div>
+</details><details class="paper" data-g="국외">
+  <summary><span class="num">41</span><span class="py">2020</span><span class="pt">Annual Research Review: A meta-analytic review of worldwide suicide rates in adolescents</span><span class="badge 국외">국외</span></summary>
+  <div class="pbody">
+    <p class="meta">Glenn CR, Kleiman EM, Kellerman J, Pollak O, Cha CB 등 · <span class="jn">Journal of Child Psychology and Psychiatry, 61(3), 294-308</span> · 대상: 청소년</p>
+    <p class="kpi"><strong>핵심 지표 변화</strong><br>WHO 사망자료 기반 국가 간 비교. 10-19세 자살률 통합 추정 3.77/10만. 국가 간 이질성 큼(에스토니아·뉴질랜드·우즈베키스탄 최고). 연령 높을수록, 남성이 높음. 경제 불평등은 남녀 자살비와 연관</p>
+    <p>청소년 자살률이 국가마다 크게 다르고, 수단 접근성(총기·철도)이 사망률과 직접 연관된다는 점을 보였다. 자살 예방이 개인 심리 개입만이 아니라 수단 접근 통제와 사회경제적 격차 완화를 포함해야 함을 시사한다.</p>
+    <p class="lim"><strong>한계</strong> WHO 사망자료의 품질과 자살 판정 기준이 국가별로 달라, 저·중소득 국가가 과소 대표된다.</p>
+    <p class="link"><a href="https://doi.org/10.1111/jcpp.13106" target="_blank" rel="noopener">원문·서지 보기 →</a></p>
+  </div>
+</details><details class="paper" data-g="국외">
+  <summary><span class="num">42</span><span class="py">2021</span><span class="pt">Global Prevalence of Depressive and Anxiety Symptoms in Children and Adolescents During COVID-19: A Meta-analysis</span><span class="badge 국외">국외</span></summary>
+  <div class="pbody">
+    <p class="meta">Racine N, McArthur BA, Cooke JE, Eirich R, Zhu J, Madigan S · <span class="jn">JAMA Pediatrics, 175(11), 1142-1150</span> · 대상: 아동·청소년</p>
+    <p class="kpi"><strong>핵심 지표 변화</strong><br>29개 연구 80,879명. 임상적으로 유의한 우울 증상 25.2%, 불안 증상 20.5%. 팬데믹 후반에 수집된 연구, 여아에서 더 높음. 우울은 연령 높을수록 높음</p>
+    <p>팬데믹 첫해에 전 세계 아동·청소년 4명 중 1명꼴로 임상 수준의 우울 증상이 있었음을 보여준 대표 메타분석이다. 시간이 지날수록, 그리고 여아에서 더 나빠지는 패턴은 이후 국내 자료와도 일치한다.</p>
+    <p class="lim"><strong>한계</strong> 팬데믹 이전 기준선이 없는 연구가 많아 &#x27;증가&#x27;인지 &#x27;측정 변화&#x27;인지 분리하기 어렵다.</p>
+    <p class="link"><a href="https://doi.org/10.1001/jamapediatrics.2021.2482" target="_blank" rel="noopener">원문·서지 보기 →</a></p>
+  </div>
+</details><details class="paper" data-g="국외">
+  <summary><span class="num">43</span><span class="py">2021</span><span class="pt">Global prevalence and burden of depressive and anxiety disorders in 204 countries and territories in 2020 due to the COVID-19 pandemic</span><span class="badge 국외">국외</span></summary>
+  <div class="pbody">
+    <p class="meta">COVID-19 Mental Disorders Collaborators · <span class="jn">The Lancet, 398(10312), 1700-1712</span> · 대상: 전연령(청년 포함)</p>
+    <p class="kpi"><strong>핵심 지표 변화</strong><br>204개국 2020년 추정. 일일 감염률과 이동성 감소가 주요우울장애·불안장애 유병률 상승과 연관. 팬데믹으로 우울·불안 유병률과 부담이 팬데믹 이전보다 증가한 것으로 추정</p>
+    <p>팬데믹이 국가 수준에서 우울·불안 유병률을 끌어올렸고, 그 크기가 감염 확산과 이동 제한의 강도에 비례한다는 점을 모델링으로 보였다. 청년층을 포함한 전 연령에서 정신건강 시스템 확충이 필요하다는 결론을 제시했다.</p>
+    <p class="lim"><strong>한계</strong> 직접 측정이 아닌 메타회귀 모델 추정치로, 국가별 자료 격차와 팬데믹 이후 변화는 반영하지 못한다.</p>
+    <p class="link"><a href="https://doi.org/10.1016/S0140-6736(21)02143-7" target="_blank" rel="noopener">원문·서지 보기 →</a></p>
+  </div>
+</details><details class="paper" data-g="국외">
+  <summary><span class="num">44</span><span class="py">2021</span><span class="pt">Temporal trends in annual incidence rates for psychiatric disorders and self-harm among children and adolescents in the UK, 2003-2018</span><span class="badge 국외">국외</span></summary>
+  <div class="pbody">
+    <p class="meta">Cybulski L, Ashcroft DM, Carr MJ, Garg S, Chew-Graham CA, Kapur N, Webb RT · <span class="jn">BMC Psychiatry, 21, 229</span> · 대상: 아동·청소년</p>
+    <p class="kpi"><strong>핵심 지표 변화</strong><br>영국 1차의료 913만 명, 2003-2018. 발생률 증가: 불안장애 IRR 3.51, 우울 2.37, ASD 2.36, ADHD 2.30, 자해 2.25, 섭식장애 1.30. 불안·우울·자해는 여아에서 절대 발생률 높음</p>
+    <p>15년간 일차의료 기록으로 소아청소년 정신과 질환 발생률이 2~3.5배 늘었음을 보여준다. 특히 불안장애 증가가 가장 컸고, 신경발달장애는 남아, 정서·자해는 여아에서 높았다. 진료 접근성 변화와 실제 발생 증가를 함께 해석해야 하는 자료다.</p>
+    <p class="lim"><strong>한계</strong> 의료기관을 찾은 경우만 집계되고, 2018년까지로 팬데믹 이후 급증은 포함하지 않는다.</p>
+    <p class="link"><a href="https://doi.org/10.1186/s12888-021-03235-w" target="_blank" rel="noopener">원문·서지 보기 →</a></p>
+  </div>
+</details><details class="paper" data-g="국외">
+  <summary><span class="num">45</span><span class="py">2021</span><span class="pt">Worldwide increases in adolescent loneliness</span><span class="badge 국외">국외</span></summary>
+  <div class="pbody">
+    <p class="meta">Twenge JM, Haidt J, Blake AB, McAllister C, Lemon H, Le Roy A · <span class="jn">Journal of Adolescence, 93, 257-269</span> · 대상: 청소년</p>
+    <p class="kpi"><strong>핵심 지표 변화</strong><br>PISA 37개국 15-16세 1,049,784명(2000·2003·2012·2015·2018). 학교 외로움은 2012-2018년 37개국 중 36개국에서 증가. 2018년 고외로움 청소년은 2012년의 약 2배. 여아에서 증가폭 큼</p>
+    <p>외로움이 특정 국가의 문제가 아니라 2010년대 전 세계적 현상임을 대규모 국제 비교로 보였다. 스마트폰 보급·인터넷 사용이 많은 나라에서 외로움이 높았고, 실업률·소득불평등·가족규모로는 설명되지 않았다.</p>
+    <p class="lim"><strong>한계</strong> 국가 간 측정 동등성이 완전하지 않고, 학교 외로움 단일 차원만 측정해 가족·지역사회 외로움은 다루지 않는다.</p>
+    <p class="link"><a href="https://doi.org/10.1016/j.adolescence.2021.06.006" target="_blank" rel="noopener">원문·서지 보기 →</a></p>
+  </div>
+</details><details class="paper" data-g="국외">
+  <summary><span class="num">46</span><span class="py">2022</span><span class="pt">Age at onset of mental disorders worldwide: large-scale meta-analysis of 192 epidemiological studies</span><span class="badge 국외">국외</span></summary>
+  <div class="pbody">
+    <p class="meta">Solmi M, Radua J, Olivola M, Croce E, Soardo L, Salazar de Pablo G 등 · <span class="jn">Molecular Psychiatry, 27(1), 281-295</span> · 대상: 아동·청소년·청년</p>
+    <p class="kpi"><strong>핵심 지표 변화</strong><br>192개 연구 708,561명. 정신장애 발병 비율: 14세 이전 34.6%, 18세 이전 48.4%, 25세 이전 62.5%. 발병 정점 14.5세. 신경발달장애 정점 5.5세, 불안장애 중앙값 17세</p>
+    <p>정신장애의 절반 이상이 25세 전에 시작되고 정점이 14.5세라는 사실을 전 세계 역학연구로 확정했다. 아동·청소년기 학교와 지역사회의 보편적 예방·조기발견이 왜 결정적인지를 수치로 뒷받침한다.</p>
+    <p class="lim"><strong>한계</strong> 회상 기반 발병연령 보고와 연구 간 진단체계 차이로, 국가별·세대별 변이를 충분히 반영하지 못한다.</p>
+    <p class="link"><a href="https://doi.org/10.1038/s41380-021-01161-7" target="_blank" rel="noopener">원문·서지 보기 →</a></p>
+  </div>
+</details>
+</div>
+</section>
+
+<section id="s7">
+<h2><span class="no">07</span>방법·검증·한계</h2>
+<div class="card">
+<h3>검증 방식</h3>
+<ul>
+<li><strong>서지</strong>: 국외 논문은 DOI를 Crossref·Europe PMC에서 조회해 저자·연도·저널·권·호·쪽·초록을 확인. 국내 논문은 KCI 원문 페이지, DOI content negotiation, 보건사회연구원·DBpia·RISS 서지로 권·호·쪽을 대조.</li>
+<li><strong>수치</strong>: 본문의 모든 수치는 해당 논문 초록 또는 원문에서 직접 확인한 값. 확인되지 않은 값은 쓰지 않았고, 초록이 잘려 확인할 수 없는 값은 정성적으로만 서술.</li>
+<li><strong>기존 자산</strong>: 기존 청소년 건강 논문 100편 CSV와 연구 알림 토픽에 이미 검증된 자살·자해 논문은 중복 수록하지 않고 2023~2026년 해석에 연결.</li>
+</ul>
+</div>
+<div class="card">
+<h3>이 보고서의 한계</h3>
+<ol>
+<li>자기보고 지표(2025년 자살생각 감소)와 사망 지표(2025년 자살률 최고)의 <strong>불일치를 완전히 설명하지 못했다</strong>. 수단·판정·인구 변화·시차의 추가 검증이 필요하다.</li>
+<li>2026년 자료는 <strong>11월 25일까지</strong>만 반영. 2026년 하반기 논문·통계는 빠져 있다.</li>
+<li>국내 연구 다수가 청소년건강행태조사 재분석이어서, 같은 표본·문항도 분석기간·보정방식에 따라 수치가 조금씩 다르다. 각 논문 값을 그대로 인용하고 출처를 병기했다.</li>
+<li>원인에 대한 단정은 피했다. 디지털·학업경쟁·사회신뢰·가족구조의 기여도를 이 논문들만으로 분해할 수 없다.</li>
+<li>Wee·마음바우처·긴급지원팀 등의 <strong>정책 효과를 인과적으로 평가한 국내 연구는 찾지 못했다</strong>.</li>
+</ol>
+</div>
+<div class="card">
+<h3>다음 단계 제안</h3>
+<ul>
+<li>2026년 사망원인통계(2027년 발표)·2026년 KYRBS로 2023~2025년 '지표 회복'이 실제인지 재확인.</li>
+<li>학교 밖 청소년 정신건강실태조사(2023)와 KYRBS를 연결한 <strong>연령·재학여부 통합 추이</strong> 분석.</li>
+<li>응급실 방문 이후 <strong>퇴원 후 6개월 사후관리</strong> 추적 연구.</li>
+</ul>
+</div>
+</section>
+
+<footer>
+<p><strong>아동·청소년·청년 마음건강 변화 추이 (2000~2026.11)</strong><br>
+작성 OH Kyoungok (오경옥) · 2026-11-27 · 근거 논문 46편(국내 24, 국외 22)<br>
+CSV: <code>downloads/child-youth-youngadult-mental-health-papers-2000-2026.csv</code></p>
+<p class="note">이 문서는 공개된 학술논문과 국가 통계를 정리한 자료이며, 개별 논문의 해석은 원문을 함께 확인하시기 바랍니다.</p>
+</footer>
+
+</div>
+<script>
+document.getElementById('f').addEventListener('click', function(e){
+  var b = e.target.closest('button'); if(!b) return;
+  this.querySelectorAll('button').forEach(function(x){x.classList.remove('on')});
+  b.classList.add('on');
+  var f = b.dataset.f;
+  document.querySelectorAll('#papers details.paper').forEach(function(d){
+    d.style.display = (f === 'all' || d.dataset.g === f) ? '' : 'none';
+  });
+});
+</script>
+</body>
+</html>
