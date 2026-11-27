@@ -26,7 +26,7 @@ h2.sec{font-size:1.16rem;font-weight:800;margin:6px 0 4px;letter-spacing:-.02em;
 .lead{color:var(--sub);font-size:.86rem;margin:0 0 12px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 14px 12px;margin:0 0 12px;box-shadow:0 1px 2px rgba(16,40,70,.04)}
 .card h3{margin:0 0 8px;font-size:.98rem;font-weight:800;color:var(--brand);display:flex;align-items:center;gap:7px}
-.card h3 .num{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:7px;background:var(--acc);color:var(--brand);font-size:.78rem;font-weight:800}
+.card h3 .num{display:inline-flex;align-items:center;justify-content:center;min-width:22px;height:22px;padding:0 5px;border-radius:7px;background:var(--acc);color:var(--brand);font-size:.78rem;font-weight:800;white-space:nowrap;flex:0 0 auto}
 .card p{margin:.35em 0;font-size:.91rem}
 .card ul,.card ol{margin:.4em 0 .4em 1.1em;padding:0;font-size:.91rem}
 .card li{margin:.24em 0}
@@ -43,8 +43,8 @@ h2.sec{font-size:1.16rem;font-weight:800;margin:6px 0 4px;letter-spacing:-.02em;
 .grp-t{font-weight:800;font-size:.95rem;color:var(--brand)}
 .grp-s{font-size:.72rem;color:var(--sub);margin-left:auto}
 .grp-c{display:none}
-.item{display:grid;grid-template-columns:2.1em 1fr auto;align-items:center;gap:8px;padding:7px 2px;border-bottom:1px solid #edf1f6}
-.item .n{font-size:.74rem;font-weight:800;color:var(--brand2);text-align:right;font-variant-numeric:tabular-nums}
+.item{display:grid;grid-template-columns:2.8em 1fr auto;align-items:center;gap:8px;padding:7px 2px;border-bottom:1px solid #edf1f6}
+.item .n{font-size:.74rem;font-weight:800;color:var(--brand2);text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
 .item .t{font-size:.9rem;line-height:1.45}
 .item .t .note{font-size:.75rem;color:var(--sub);margin-top:2px}
 .opts{display:flex;gap:4px}
@@ -93,12 +93,17 @@ footer.end{color:var(--sub);font-size:.75rem;text-align:center;padding:18px 8px 
  section.panel.on{display:block!important}
  section.panel{page-break-before:always}
  #overview{page-break-before:auto}
- .card{box-shadow:none;border:1px solid #bbb;border-radius:0;padding:2.6mm 3mm;margin:0 0 2.4mm;break-inside:avoid}
+ .card{box-shadow:none;border:1px solid #bbb;border-radius:0;padding:2.6mm 3mm;margin:0 0 2.4mm;break-inside:auto}
+ .card h3{break-after:avoid}
+ h2.sec{break-after:avoid}
+ .grp-h{break-after:avoid}
  .card h3{font-size:9.4pt;margin:0 0 1.4mm}
  .card p,.card ul,.card ol,.lead{font-size:8.4pt}
  .grp-h{border-bottom:1.2pt solid #000;padding:1.2mm 0 .8mm}
  .grp-t{font-size:9pt}
  .grp-l{background:#000}
+ .grp-h{gap:0 2mm}
+ .grp-c{display:inline-block;width:9mm;text-align:center;font-size:6.4pt;color:#444}
  .item{grid-template-columns:7mm 1fr 9mm 9mm;gap:0 2mm;padding:.55mm 0;border-bottom:.4pt solid #ccc;break-inside:avoid}
  .item .t{font-size:8.4pt;line-height:1.28}
  .item .n{font-size:7pt}
@@ -119,11 +124,22 @@ footer.end{color:var(--sub);font-size:.75rem;text-align:center;padding:18px 8px 
  .table-wrap{overflow:visible;border:.4pt solid #999}
  .table-wrap{break-inside:auto}
  tr{break-inside:avoid}
- #form1 .card,#form1 .grp{break-inside:auto}
  #form1 .lead{display:none}
- #form1 .meta-grid{font-size:7.8pt;gap:0 6mm}
- #form1 .item{padding:.35mm 0}
- #form1 .item .t{font-size:8.1pt;line-height:1.24}
+ #form1 h2.sec{font-size:11.5pt;margin:0 0 1.4mm}
+ #form1 .card{padding:1.7mm 2.2mm;margin-bottom:1.8mm;break-inside:avoid}
+ #form1 .meta-grid{font-size:7.2pt;gap:0 4mm}
+ #form1 .field{padding:.7mm 0}
+ #form1 .note-box{font-size:7.3pt;padding:1.4mm 2mm;line-height:1.35;margin:0}
+ #form1 .grp{margin-bottom:1.4mm}
+ #form1 .grp-h{padding:.8mm 0 .5mm;margin-bottom:0}
+ #form1 .grp-t{font-size:8.2pt}
+ #form1 .grp-l{min-width:4.6mm;height:4.2mm;font-size:7pt}
+ #form1 .item{padding:.25mm 0}
+ #form1 .item .t{font-size:8pt;line-height:1.22}
+ #form1 .item .n{font-size:6.6pt}
+ #form1 .extra{margin-top:.3mm}
+ #form1 .blank-inline{font-size:7.2pt}
+ #form1 .tag{font-size:5.6pt}
  .print-only{display:block!important}
  footer.end{font-size:7pt}
 }
