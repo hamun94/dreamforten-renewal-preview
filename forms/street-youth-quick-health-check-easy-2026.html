@@ -179,66 +179,68 @@ footer.cred{text-align:center;font-size:.75rem;color:var(--sub);padding:4px 16px
   @page{size:A5 portrait;margin:5mm}
   html,body{background:#fff}
   body{font-size:8pt;line-height:1.35;color:#000}
-  .app{display:none!important}
+  .app,.bar,noscript{display:none!important}
   .sheet{display:block;color:#111;font-family:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif}
+  #sheetBack{break-before:page;page-break-before:always}
   .sheet *{box-sizing:border-box}
   .sheet .ph{display:flex;align-items:flex-end;justify-content:space-between;gap:4mm;border-bottom:.5mm solid #1f6b4f;padding-bottom:1.6mm}
-  .sheet .ph h1{margin:0;font-size:12.5pt;font-weight:800;letter-spacing:-.04em;line-height:1.15}
+  .sheet .ph h1{margin:0;font-size:13.4pt;font-weight:800;letter-spacing:-.04em;line-height:1.15}
   .sheet .ph .tag{font-size:6.6pt;font-weight:700;color:#1f6b4f;border:.3mm solid #9ec9b3;border-radius:2mm;padding:.7mm 1.6mm;white-space:nowrap;line-height:1.2}
-  .sheet .pub{font-size:6.4pt;color:#3f5449;margin:1.2mm 0 0}
+  .sheet .pub{font-size:6.8pt;color:#3f5449;margin:1.4mm 0 0}
   .sheet .pub b{color:#1f6b4f}
   .sheet .guide{
-    font-size:7.4pt;line-height:1.45;background:#f0f8f3;border-left:.9mm solid #3f9d6d;
-    padding:1.6mm 2.2mm;margin:1.8mm 0;border-radius:1mm;color:#123a2a;
+    font-size:7.9pt;line-height:1.45;background:#f0f8f3;border-left:.9mm solid #3f9d6d;
+    padding:1.9mm 2.4mm;margin:2mm 0;border-radius:1mm;color:#123a2a;
   }
   .sheet .gsep{display:block;margin-top:.5mm}
-  .sheet .mline{display:flex;gap:2.5mm;font-size:7.2pt;flex-wrap:nowrap;margin:1.4mm 0 2.2mm;align-items:flex-end}
+  .sheet .mline{display:flex;gap:2.5mm;font-size:7.4pt;flex-wrap:nowrap;margin:1.6mm 0 1.6mm;align-items:flex-end}
   .sheet .mline span{white-space:nowrap}
-  .sheet .fill{flex:1;border-bottom:.3mm solid #7d9b8b;min-height:3.4mm}
-  .sheet .fill.s{flex:0 0 13mm}
-  .sheet .fill.d{flex:0 0 20mm}
-  .sheet .place{font-size:7pt;white-space:nowrap}
-  .sheet .place i{font-style:normal;letter-spacing:.2mm}
+  .sheet .fill{flex:1;border-bottom:.3mm solid #7d9b8b;min-height:3.8mm}
+  .sheet .fill.s{flex:0 0 14mm}
+  .sheet .fill.d{flex:0 0 22mm}
+  .sheet .mline2{display:flex;gap:2.5mm;align-items:baseline;font-size:7.4pt;margin:0 0 2.4mm}
+  .sheet .place i{font-style:normal;letter-spacing:.15mm;color:#25413a}
   .sheet .sec{
     display:flex;align-items:baseline;gap:1.6mm;border-bottom:.4mm solid #1f6b4f;
     margin:2.2mm 0 1mm;padding-bottom:.5mm;
   }
-  .sheet .sec .n{font-size:7.6pt;font-weight:800;color:#fff;background:#1f6b4f;border-radius:1mm;padding:.3mm 1.4mm}
-  .sheet .sec .t{font-size:8.2pt;font-weight:800;color:#14503a}
-  .sheet .sec .s{margin-left:auto;font-size:6.2pt;color:#4a6156}
-  .sheet .pq{display:grid;grid-template-columns:4.6mm 1fr;gap:0 1mm;padding:.9mm 0 .7mm;border-bottom:.2mm dotted #cadbcf;break-inside:avoid}
+  .sheet .sec .n{font-size:7.8pt;font-weight:800;color:#fff;background:#1f6b4f;border-radius:1mm;padding:.35mm 1.5mm}
+  .sheet .sec .t{font-size:8.6pt;font-weight:800;color:#14503a}
+  .sheet .sec .s{margin-left:auto;font-size:6.5pt;color:#4a6156}
+  .sheet .pq{display:grid;grid-template-columns:4.8mm 1fr;gap:0 1.2mm;padding:1.1mm 0 .9mm;border-bottom:.2mm dotted #cadbcf;break-inside:avoid}
   .sheet .pq:last-child{border-bottom:0}
-  .sheet .pq .qn{font-size:7.2pt;font-weight:800;color:#2f7ab0;text-align:right;line-height:1.35}
-  .sheet .pq .qtx{font-size:7.8pt;font-weight:700;line-height:1.35;letter-spacing:-.02em}
-  .sheet .pq .po{grid-column:2;font-size:7.4pt;line-height:1.3;color:#25413a;margin-top:.5mm;display:flex;flex-wrap:wrap;gap:.6mm 3.2mm}
+  .sheet .pq .qn{font-size:7.5pt;font-weight:800;color:#2f7ab0;text-align:right;line-height:1.35}
+  .sheet .pq .qtx{font-size:8.2pt;font-weight:700;line-height:1.38;letter-spacing:-.02em}
+  .sheet .pq .po{grid-column:2;font-size:7.8pt;line-height:1.35;color:#25413a;margin-top:.7mm;display:flex;flex-wrap:wrap;gap:.8mm 3.4mm}
   .sheet .pq .po em{font-style:normal;font-weight:700}
   .sheet .pq .po i{font-style:normal;color:#b3261e;font-weight:800}
-  .sheet .note{font-size:6.7pt;line-height:1.45;color:#1d4438;background:#eef6f9;border-left:.8mm solid #2f7ab0;padding:1.2mm 2mm;border-radius:1mm;margin:.6mm 0 1mm}
-  .sheet .foot{display:flex;justify-content:space-between;gap:3mm;font-size:6pt;color:#40564a;border-top:.3mm solid #b9cfc2;margin-top:1.8mm;padding-top:.9mm}
+  .sheet .note{font-size:7pt;line-height:1.45;color:#1d4438;background:#eef6f9;border-left:.8mm solid #2f7ab0;padding:1.3mm 2.2mm;border-radius:1mm;margin:.7mm 0 1.2mm}
+  .sheet .foot{display:flex;justify-content:space-between;gap:3mm;font-size:6.3pt;color:#40564a;border-top:.3mm solid #b9cfc2;margin-top:2mm;padding-top:1mm}
 
   /* 뒷면 */
   .sheet.back .bhead{display:flex;align-items:flex-end;justify-content:space-between;border-bottom:.5mm solid #1f6b4f;padding-bottom:1.4mm}
-  .sheet.back .bhead h1{margin:0;font-size:11.5pt;font-weight:800;letter-spacing:-.04em}
-  .sheet.back .bhead .r{font-size:6.3pt;color:#3f5449;text-align:right;line-height:1.3}
-  .sheet .disclaim{font-size:6.6pt;color:#7d1c16;font-weight:700;margin:1.4mm 0 1.6mm;background:#fdeceb;border-radius:1mm;padding:1mm 2mm}
-  .sheet .tier{border-radius:1.4mm;padding:1.8mm 2.2mm;margin:0 0 1.6mm;break-inside:avoid}
-  .sheet .tier .th{display:flex;align-items:baseline;gap:1.5mm;margin-bottom:.8mm}
-  .sheet .tier .th b{font-size:8.6pt;letter-spacing:-.02em}
-  .sheet .tier .th span{font-size:6.4pt;font-weight:700;opacity:.85}
-  .sheet .tier p{margin:0 0 .7mm;font-size:7.1pt;line-height:1.4}
-  .sheet .tier .say{font-size:7.2pt;font-weight:700;line-height:1.4;margin:.7mm 0}
-  .sheet .tier ul{margin:.5mm 0 0 3.2mm;padding:0;font-size:6.8pt;line-height:1.4}
-  .sheet .tier li{margin:.2mm 0}
+  .sheet.back .bhead h1{margin:0;font-size:12.4pt;font-weight:800;letter-spacing:-.04em}
+  .sheet.back .bhead .r{font-size:6.7pt;color:#3f5449;text-align:right;line-height:1.3}
+  .sheet .disclaim{font-size:6.9pt;color:#7d1c16;font-weight:700;margin:1.6mm 0 1.8mm;background:#fdeceb;border-radius:1mm;padding:1.1mm 2.2mm}
+  .sheet .tier{border-radius:1.4mm;padding:2.1mm 2.5mm;margin:0 0 1.9mm;break-inside:avoid}
+  .sheet .tier .th{display:flex;align-items:baseline;gap:1.5mm;margin-bottom:1mm;flex-wrap:wrap}
+  .sheet .tier .th b{font-size:9.2pt;letter-spacing:-.02em}
+  .sheet .tier .th span{font-size:6.8pt;font-weight:700;opacity:.85}
+  .sheet .tier p{margin:0 0 .8mm;font-size:7.5pt;line-height:1.42}
+  .sheet .tier .say{font-size:7.7pt;font-weight:700;line-height:1.42;margin:.9mm 0}
+  .sheet .tier ul{margin:.6mm 0 0 3.4mm;padding:0;font-size:7.2pt;line-height:1.42}
+  .sheet .tier li{margin:.25mm 0}
   .sheet .tier.g{background:#e8f6ee;color:#14563a;border:.3mm solid #b8dfc9}
   .sheet .tier.a{background:#fdf3e3;color:#6b4207;border:.3mm solid #edd3a3}
   .sheet .tier.r{background:#fdeceb;color:#7d1c16;border:.3mm solid #efb9b4}
-  .sheet table.memo{width:100%;border-collapse:collapse;font-size:6.9pt;margin:.4mm 0 0}
-  .sheet table.memo th,.sheet table.memo td{border:.3mm solid #b9cfc2;padding:1.15mm 1.4mm;text-align:left;height:5.4mm}
-  .sheet table.memo th{background:#f0f8f3;color:#14563a;font-weight:800;white-space:nowrap;width:22mm}
-  .sheet .readbox{margin-top:1.6mm;border-top:.3mm dashed #9ec9b3;padding-top:1.2mm}
-  .sheet .readbox b{font-size:7.4pt;color:#14563a}
-  .sheet .readbox ul{margin:.6mm 0 0 3.4mm;padding:0;font-size:6.7pt;line-height:1.42}
-  .sheet .readbox li{margin:.2mm 0}
+  .sheet table.memo{width:100%;border-collapse:collapse;font-size:7.2pt;margin:.5mm 0 0}
+  .sheet table.memo th,.sheet table.memo td{border:.3mm solid #b9cfc2;padding:1.3mm 1.6mm;text-align:left;height:6.4mm}
+  .sheet table.memo th{background:#f0f8f3;color:#14563a;font-weight:800;white-space:nowrap;width:23mm}
+  .sheet .readbox{margin-top:1.9mm;border-top:.3mm dashed #9ec9b3;padding-top:1.4mm}
+  .sheet .readbox b{font-size:7.8pt;color:#14563a}
+  .sheet .readbox ul{margin:.7mm 0 0 3.6mm;padding:0;font-size:7.1pt;line-height:1.45}
+  .sheet .readbox li{margin:.25mm 0}
+  .sheet .leg{font-size:6.6pt;color:#40564a;margin:1.2mm 0 0;line-height:1.4}
 }
 </style>
 </head>
@@ -463,7 +465,9 @@ footer.cred{text-align:center;font-size:.75rem;color:var(--sub);padding:4px 16px
     <span>별명</span><span class="fill"></span>
     <span>나이</span><span class="fill s"></span>
     <span>날짜</span><span class="fill d"></span>
-    <span class="place">만난 곳 <i>○ 이동버스 ○ 거리 ○ 쉼터 ○ 기타</i></span>
+  </div>
+  <div class="mline2">
+    <span>만난 곳</span><span class="place"><i>○ 이동버스&nbsp;&nbsp;○ 거리&nbsp;&nbsp;○ 쉼터&nbsp;&nbsp;○ 기타</i></span>
   </div>
 
   <div class="sec"><span class="n">1</span><span class="t">오늘 밥 · 잠 · 자는 곳</span><span class="s">3문항</span></div>
@@ -500,7 +504,7 @@ footer.cred{text-align:center;font-size:.75rem;color:var(--sub);padding:4px 16px
     <span class="po"><em>○ 아니</em><em>○ 응</em></span></div>
 
   <div class="foot">
-    <span>❗ 표시는 ‘오늘 안에 확인할 신호’예요. 판정과 대화 방법은 뒷면을 봐 주세요.</span>
+    <span>❗ 표시는 ‘꼭 확인할 신호’예요. 판정과 대화 방법은 뒷면을 봐 주세요.</span>
     <span>뒷면 →</span>
   </div>
 </div>
@@ -561,6 +565,8 @@ footer.cred{text-align:center;font-size:.75rem;color:var(--sub);padding:4px 16px
       <li>기록은 아이가 보는 앞에서 쓰고, 누구에게 보여 줄지 미리 알려 주세요.</li>
     </ul>
   </div>
+
+  <p class="leg">※ ⑥의 ❗는 복약·진료 재개 신호로 판정은 🟡, ⑫ ‘응’은 여성 건강 상담·진료 연계(🟡)로 봅니다.</p>
 
   <div class="foot">
     <span>1393 자살예방 · 1388 청소년 · 112 경찰 · 119 응급</span>
