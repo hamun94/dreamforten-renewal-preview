@@ -187,7 +187,15 @@ td.scale span{display:inline-block;min-width:19px;text-align:center;border:1px s
 .big-title{font-size:1.22rem;font-weight:800;line-height:1.35;letter-spacing:-.03em;color:var(--brand);margin:2px 0 6px}
 .card h3 .num{display:none}
 .usage{font-size:.78rem;color:var(--sub);background:#f6f9fc;border-radius:8px;padding:8px 10px;margin-top:10px}
-@media print{.badge-row{display:none}}
+@media print{
+ .badge-row,.usage{display:none}
+ .card{break-inside:auto;box-shadow:none}
+ .card h3{break-after:avoid}
+ .choice-list li{font-size:8pt;padding:.6mm 1.6mm}
+ td.scale span{min-width:5mm}
+ .card table{font-size:8pt}
+ .gate,.note-box{break-inside:avoid}
+}
 </style>
 </head>
 <body>
