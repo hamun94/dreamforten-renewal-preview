@@ -434,12 +434,14 @@ footer.cred{text-align:center;font-size:.75rem;color:var(--sub);padding:4px 16px
 </div>
 
 <div class="bar">
-  <button class="stat" type="button" id="barStat" aria-label="결과 보기">
-    <span class="sig" id="barSig">🌱</span>
-    <span class="txt"><span id="barTxt">아직 대답 전</span><span class="cnt" id="barCnt">12문항 · 비워도 괜찮아요</span></span>
-  </button>
-  <button class="print" type="button" onclick="window.print()">인쇄</button>
-  <button class="reset" type="button" id="reset">처음부터</button>
+  <div class="bar-in">
+    <button class="stat" type="button" id="barStat" aria-label="결과 보기">
+      <span class="sig" id="barSig">🌱</span>
+      <span class="txt"><span id="barTxt">아직 대답 전</span><span class="cnt" id="barCnt">12문항 · 비워도 괜찮아요</span></span>
+    </button>
+    <button class="print" type="button" onclick="window.print()">인쇄</button>
+    <button class="reset" type="button" id="reset">처음부터</button>
+  </div>
 </div>
 
 <noscript><p style="padding:12px 16px;background:#fff7e8;color:#6b4207">신호 자동 표시는 자바스크립트가 필요해요. 문항은 그대로 읽고 종이에 체크해도 됩니다.</p></noscript>
