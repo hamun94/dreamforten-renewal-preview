@@ -589,6 +589,29 @@ footer.cred{text-align:center;font-size:.75rem;color:var(--sub);padding:4px 16px
     10:'그런 일을 겪고 있었구나. 네 잘못이 아니야. 오늘부터 안전하게 지낼 방법을 같이 찾아보자.',
     11:'몸이 보내는 신호일 수 있어. 아프면 참지 말고 병원에 같이 가보자.'
   };
+  var CARE_SAY = {
+    1:'오늘 밥 아직 못 먹었구나. 일단 여기 따뜻한 거 먹고 잠깐 쉬었다 갈래?',
+    2:'어젯밤에 잠을 잘 못 잤구나. 여기서 조금 눈 붙이고 갈래?',
+    3:'조금 불편한 곳에서 자고 있구나. 오늘 밤은 더 편한 곳에서 잘 수 있게 같이 찾아볼까?',
+    4:'다친 데가 있구나. 여기서 소독하고 밴드 붙여 줄까?',
+    5:'요즘 몸이 자주 아프구나. 언제부터 그랬는지 조금 더 들려줄래?'
+  };
+  var AMBER_SAY = {
+    6:'원래 먹던 약이 끊겼구나. 혹시 병원 같이 가주는 거 필요하면 얘기해 줘.',
+    9:'그런 생각이 들 만큼 힘들었구나. 지금은 어때? 조금 더 들려줄래?',
+    10:'예전에 그런 일이 있었구나. 지금은 그 사람이 어떻게 지내?',
+    8:'며칠 동안 혼자 숨어 지냈구나. 그동안 무슨 일이 있었는지 들려줄래?',
+    12:'몸이 불편한 게 있었구나. 아프면 참지 말고 병원에 같이 가 볼까?',
+    5:'요즘 몸이 자주 아프구나. 잠은 어떤지, 밥은 잘 먹는지 같이 볼까?',
+    7:'요즘 그런 마음이 자주 들었구나. 언제부터 그랬는지 조금 더 들려줄래?'
+  };
+  var AMBER_ORDER = [6,9,10,8,12,5,7];
+  var CARE_ORDER = [1,2,3,4,5];
+
+  function pick(map, order, list){
+    for (var i=0;i<order.length;i++){ if (list.indexOf(order[i]) >= 0) return map[order[i]]; }
+    return null;
+  }
 
   var rCard = document.getElementById('result');
   var rDot = document.getElementById('rDot'), rTitle = document.getElementById('rTitle'),
@@ -672,10 +695,10 @@ footer.cred{text-align:center;font-size:.75rem;color:var(--sub);padding:4px 16px
         rChips.appendChild(chip('④~⑧ 중 ' + caution.length + '개 해당', 'amber'));
       }
       rOpener.hidden = false;
-      rOpenerText.textContent = (state[6] !== undefined && state[6] >= 2)
-        ? '원래 먹던 약이 끊겼구나. 혹시 병원 같이 가주는 거 필요하면 얘기해 줘.'
-        : '요즘 그런 마음이 자주 들었구나. 언제부터 그랬는지 조금 더 들려줄래?';
-      rNext.innerHTML = '<b>다음 단계</b> · 1차 문진(35문항) 연결 · 병원 동행·복약 확인 · ⑫ 응답 시 여성 건강 진료 연계';
+      rOpenerText.textContent = pick(AMBER_SAY, AMBER_ORDER, ambers.concat(caution))
+        || '요즘 어떤지 조금 더 들려줄래?';
+      rNext.innerHTML = '<b>다음 단계</b> · 1차 문진(35문항) 연결 · 병원 동행·복약 확인'
+        + (state[12] === 2 ? ' · ⑫ 여성 건강 진료 연계' : '');
       barSig.textContent = '🟡'; barTxt.textContent = '상담·연계';
       barCnt.textContent = answeredNote;
     } else {
@@ -684,7 +707,8 @@ footer.cred{text-align:center;font-size:.75rem;color:var(--sub);padding:4px 16px
       rBody.textContent = '따뜻한 간식과 휴식, 필요한 상비약·세면부터 챙겨 주세요. 언제든 다시 이야기해도 된다고 전해 주세요.';
       cares.forEach(function(q){ rChips.appendChild(chip(q + '. ' + NAMES[q], 'care')); });
       rOpener.hidden = false;
-      rOpenerText.textContent = '오늘 밥 아직 못 먹었구나. 일단 여기 따뜻한 거 먹고 잠깐 쉬었다 갈래?';
+      rOpenerText.textContent = pick(CARE_SAY, CARE_ORDER, cares)
+        || '오늘 여기까지 잘 이야기해 줬어. 불편한 게 생기면 언제든 말해 줘.';
       rNext.innerHTML = '<b>다음 단계</b> · 간식·휴식·상비약 · 3일 이상 이어지면 진료 권유';
       barSig.textContent = '🟢'; barTxt.textContent = '일상 돌봄';
       barCnt.textContent = answeredNote;
