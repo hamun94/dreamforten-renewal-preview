@@ -177,6 +177,7 @@ li.ck{list-style:none;margin-left:-1em}
 .gate p{margin:.25em 0}
 .note-box p{margin:.25em 0}
 .card table td:first-child{font-weight:600}
+td.scale span{display:inline-block;min-width:19px;text-align:center;border:1px solid #cfd9e4;border-radius:5px;background:#f8fbfe;margin-right:3px;font-size:.76rem;color:#4a5f75;padding:1px 0;line-height:1.5}
 .card blockquote{margin:.4em 0}
 .badge-row{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 2px}
 .badge-row span{font-size:.72rem;font-weight:700;padding:4px 9px;border-radius:999px;background:#e9f0f7;color:#2a4c6b}
@@ -200,7 +201,7 @@ li.ck{list-style:none;margin-left:-1em}
   <button id="printAll">전체 인쇄 / PDF</button>
   <span class="hint">상단 탭으로 1차·2차를 나눠 봅니다. 인쇄는 전체가 한 번에 나옵니다.</span>
 </div>
-<section class="panel on" id="overview"><div class="card lead-card"><div class="big-title">거리청소년 건강서비스 경험 당사자 조사 — 1차 웹 설문 · 2차 대면 인터뷰 질문지 (초안 v1.0)</div><div class="meta-list"><b>작성</b> OH Kyoungok (오경옥) · 의정부시일시청소년쉼터(이동형)<br><b>작성일</b> 2026년 11월 27일<br><b>근거 문서</b> 「거리청소년 건강·위기 문진표 — 2026 개정판 초안 v1.0」(`downloads/street-youth-health-screening-2026-draft.md`)<br><b>조사 대상</b> 과거 일시쉼터·이동형 쉼터의 건강서비스(문진·상담·연계)를 받았던 <b>만 24세 이상</b> 청년<br><b>문서 성격</b> 현장 검토용 초안(draft). IRB·개인정보 검토와 실무자 회의를 거쳐 확정한다.</div><div class="badge-row"><span>초안 v1.0</span><span>웹 설문 34문항</span><span>인터뷰 60~90분</span><span class="warn">현장 검토용 · 미확정</span></div><div class="usage">이 화면은 검토용 미리보기입니다. 1차 설문은 실제 응답을 받는 폼이 아니라, 폼에 옮길 문항과 선택지를 그대로 보여 주는 문서입니다. 문항을 눌러도 응답이 저장되지 않습니다.</div></div>
+<section class="panel on" id="overview"><div class="card lead-card"><div class="big-title">거리청소년 건강서비스 경험 당사자 조사 — 1차 웹 설문 · 2차 대면 인터뷰 질문지 (초안 v1.0)</div><div class="meta-list"><b>작성</b> OH Kyoungok (오경옥) · 의정부시일시청소년쉼터(이동형)<br><b>작성일</b> 2026년 11월 27일<br><b>근거 문서</b> 「거리청소년 건강·위기 문진표 — 2026 개정판 초안 v1.0」(downloads/street-youth-health-screening-2026-draft.md)<br><b>조사 대상</b> 과거 일시쉼터·이동형 쉼터의 건강서비스(문진·상담·연계)를 받았던 <b>만 24세 이상</b> 청년<br><b>문서 성격</b> 현장 검토용 초안(draft). IRB·개인정보 검토와 실무자 회의를 거쳐 확정한다.</div><div class="badge-row"><span>초안 v1.0</span><span>웹 설문 34문항</span><span>인터뷰 60~90분</span><span class="warn">현장 검토용 · 미확정</span></div><div class="usage">이 화면은 검토용 미리보기입니다. 1차 설문은 실제 응답을 받는 폼이 아니라, 폼에 옮길 문항과 선택지를 그대로 보여 주는 문서입니다. 문항을 눌러도 응답이 저장되지 않습니다.</div></div>
 <h2 class="sec" id="sec0">0. 이 조사의 목적과 두 단계의 역할</h2>
 <div class="card"><h3>0-1. 목적</h3><p>2026 개정 문진표(v1.0)와 서비스 개편(정신건강 지원 특성화)을 <strong>당사자 경험으로 검증</strong>한다. 개정안은 실무자 판단과 국가 척도(KYCI 2024)에 근거해 만들었지만, "그 문장이 실제로 말을 꺼내게 하는가"는 그 자리에서 문진표를 받아 든 사람만 안다. 이 조사는 그 부분을 채운다.</p></div>
 <div class="card"><h3>0-2. 두 단계의 역할 분담</h3><table>
@@ -400,45 +401,47 @@ li.ck{list-style:none;margin-left:-1em}
 <p>실명이 아니어도 됩니다. 기억하기 쉬운 말이면 충분합니다. (예: 라면, 겨울, 나무)</p>
 </div>
 <p class="q"><strong>Q5.</strong> 2차 인터뷰 안내를 받으실 방법이 있습니까? <span class="lbl">(선택 · 복수)</span></p>
-<ul class="choice-list"><li>① 휴대폰 문자 ② 카카오톡 오픈채팅 ③ 이메일 ④ SNS 메시지 ⑤ 받지 않겠습니다</li></ul>
+<ul class="choice-list"><li>① 휴대폰 문자 </li><li>② 카카오톡 오픈채팅 </li><li>③ 이메일 </li><li>④ SNS 메시지 </li><li>⑤ 받지 않겠습니다</li></ul>
 <p class="q"><strong>Q6.</strong> 연락처를 적어 주세요. <span class="lbl">(선택 · 짧은 답변 — Q5에서 ⑤를 고르셨으면 건너뛰세요)</span></p>
 <div class="note-box">
 <p>연락처는 <strong>응답 내용과 따로</strong> 보관하고, 인터뷰 안내가 끝나면 지웁니다.</p>
 </div>
 <p class="q"><strong>Q7.</strong> 성별 <span class="lbl">(선택 · 단일)</span></p>
-<ul class="choice-list"><li>① 남 ② 여 ③ 기타(직접 입력) ④ 응답하지 않음</li></ul></div>
+<ul class="choice-list"><li>① 남 </li><li>② 여 </li><li>③ 기타(직접 입력) </li><li>④ 응답하지 않음</li></ul></div>
 <div class="card"><h3>2-2. 섹션 2 — 그때의 이용 경험 (약 1분 30초)</h3><p class="q"><strong>Q8.</strong> 이용한 시기는 언제쯤입니까? <span class="lbl">(필수 · 단일)</span></p>
-<ul class="choice-list"><li>① 2012~2014년 ② 2015~2017년 ③ 2018~2020년 ④ 2021~2023년 ⑤ 2024~2026년 ⑥ 기억나지 않음</li></ul>
+<ul class="choice-list"><li>① 2012~2014년 </li><li>② 2015~2017년 </li><li>③ 2018~2020년 </li><li>④ 2021~2023년 </li><li>⑤ 2024~2026년 </li><li>⑥ 기억나지 않음</li></ul>
 <p class="q"><strong>Q9.</strong> 이용하실 때 만 나이는? <span class="lbl">(필수 · 단일)</span></p>
-<ul class="choice-list"><li>① 13~15세 ② 16~18세 ③ 19~21세 ④ 22~24세 ⑤ 기억나지 않음</li></ul>
+<ul class="choice-list"><li>① 13~15세 </li><li>② 16~18세 </li><li>③ 19~21세 </li><li>④ 22~24세 </li><li>⑤ 기억나지 않음</li></ul>
 <p class="q"><strong>Q10.</strong> 어떻게 저희를 만나게 되었습니까? <span class="lbl">(복수 · 해당 모두)</span></p>
 <ul class="choice-list"><li>① 이동형 버스에서</li><li>② 거리에서(텐트·부스·도보 아웃리치)</li><li>③ 쉼터 건물에 직접 방문</li><li>④ 친구·지인의 소개</li><li>⑤ 학교·기관·경찰 등의 연결</li><li>⑥ 인터넷·SNS를 보고</li><li>⑦ 기타</li></ul>
 <p class="q"><strong>Q11.</strong> 이용 기간은 어느 정도였습니까? <span class="lbl">(단일)</span></p>
-<ul class="choice-list"><li>① 한두 번 만난 정도 ② 1개월 미만 ③ 1~3개월 ④ 3~6개월 ⑤ 6개월~1년 ⑥ 1년 이상 ⑦ 일정하지 않았음</li></ul>
+<ul class="choice-list"><li>① 한두 번 만난 정도 </li><li>② 1개월 미만 </li><li>③ 1~3개월 </li><li>④ 3~6개월 </li><li>⑤ 6개월~1년 </li><li>⑥ 1년 이상 </li><li>⑦ 일정하지 않았음</li></ul>
 <p class="q"><strong>Q12.</strong> 만남의 빈도는? <span class="lbl">(단일)</span></p>
-<ul class="choice-list"><li>① 거의 매일 ② 주 2~3회 ③ 주 1회 ④ 월 2~3회 ⑤ 월 1회 이하 ⑥ 일정하지 않았음</li></ul></div>
-<div class="card"><h3>2-3. 섹션 3 — 그때의 몸과 마음, 받았던 도움 (약 1분 30초)</h3><p class="q"><strong>Q13.</strong> 그때의 상태는 어땠습니까? <span class="lbl">(필수 · 5점 척도 2문항)</span><br>
-| | 매우 좋지 않았다 ① ② ③ ④ ⑤ 매우 좋았다 |<br>
-|---|---|<br>
-| 몸 상태는 | ① ② ③ ④ ⑤ |<br>
-| 마음 상태는 | ① ② ③ ④ ⑤ |</p>
+<ul class="choice-list"><li>① 거의 매일 </li><li>② 주 2~3회 </li><li>③ 주 1회 </li><li>④ 월 2~3회 </li><li>⑤ 월 1회 이하 </li><li>⑥ 일정하지 않았음</li></ul></div>
+<div class="card"><h3>2-3. 섹션 3 — 그때의 몸과 마음, 받았던 도움 (약 1분 30초)</h3><p class="q"><strong>Q13.</strong> 그때의 상태는 어땠습니까? <span class="lbl">(필수 · 5점 척도 2문항)</span></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>매우 좋지 않았다 ① ② ③ ④ ⑤ 매우 좋았다</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>몸 상태는</td>
+<td class="scale"><span>①</span><span>②</span><span>③</span><span>④</span><span>⑤</span></td>
+</tr>
+<tr>
+<td>마음 상태는</td>
+<td class="scale"><span>①</span><span>②</span><span>③</span><span>④</span><span>⑤</span></td>
+</tr>
+</tbody>
+</table>
 <p class="q"><strong>Q14.</strong> 그때 겪고 있던 것으로 해당되는 것을 골라 주세요. <span class="lbl">(복수 · 최대 4개 · 선택)</span></p>
 <div class="note-box">
-<p>떠올리기 힘든 항목이 있으면 건너뛰셔도 됩니다. 지금 다시 힘들어지면 언제든 멈추셔도 됩니다.<br>
-- ① 잠을 못 자거나 자주 깼다<br>
-- ② 끼니를 거르거나 굶는 날이 많았다<br>
-- ③ 아파도 병원에 가지 못했다<br>
-- ④ 우울하고 무기력했다<br>
-- ⑤ 불안하거나 숨이 막히는 느낌이 들었다<br>
-- ⑥ 죽고 싶다는 생각이 들었다<br>
-- ⑦ 일부러 몸에 상처를 낸 적이 있다<br>
-- ⑧ 다른 사람이 나를 해치려 하거나 감시하는 것 같았다<br>
-- ⑨ 밖에 나가기 두려워 방에만 지냈다<br>
-- ⑩ 온라인에서 괴롭힘·욕설·협박을 당하거나 사진이 퍼졌다<br>
-- ⑪ 성과 관련해 걱정되는 일이 있었다<br>
-- ⑫ 술이나 약에 기대게 되었다<br>
-- ⑬ 해당 없음 ⑭ 기억나지 않음</p>
+<p>떠올리기 힘든 항목이 있으면 건너뛰셔도 됩니다. 지금 다시 힘들어지면 언제든 멈추셔도 됩니다.</p>
 </div>
+<ul class="choice-list"><li>① 잠을 못 자거나 자주 깼다</li><li>② 끼니를 거르거나 굶는 날이 많았다</li><li>③ 아파도 병원에 가지 못했다</li><li>④ 우울하고 무기력했다</li><li>⑤ 불안하거나 숨이 막히는 느낌이 들었다</li><li>⑥ 죽고 싶다는 생각이 들었다</li><li>⑦ 일부러 몸에 상처를 낸 적이 있다</li><li>⑧ 다른 사람이 나를 해치려 하거나 감시하는 것 같았다</li><li>⑨ 밖에 나가기 두려워 방에만 지냈다</li><li>⑩ 온라인에서 괴롭힘·욕설·협박을 당하거나 사진이 퍼졌다</li><li>⑪ 성과 관련해 걱정되는 일이 있었다</li><li>⑫ 술이나 약에 기대게 되었다</li><li>⑬ 해당 없음 </li><li>⑭ 기억나지 않음</li></ul>
 <p class="q"><strong>Q15.</strong> 그때 <strong>실제로 받은</strong> 도움은 무엇이었습니까? <span class="lbl">(복수 · 해당 모두)</span></p>
 <ul class="choice-list"><li>① 건강 질문지 작성·건강 체크</li><li>② 상처·질병 치료(병원 동행 포함)</li><li>③ 약값·치료비 지원</li><li>④ 쉼터 종사자와 마음 이야기 나누기</li><li>⑤ 외부 상담기관(청소년상담복지센터 등) 연결</li><li>⑥ 정신과·정신건강복지센터 진료 연결</li><li>⑦ 자살·자해 위기 대응</li><li>⑧ 성건강 검사·상담·피임</li><li>⑨ 신분증·서류·건강보험 문제 해결</li><li>⑩ 잠자리·씻기·끼니</li><li>⑪ 거의 받은 게 없다</li><li>⑫ 기타</li></ul>
 <p class="q"><strong>Q16.</strong> 그때 <strong>마음(정신건강) 이야기</strong>를 종사자와 나눈 적이 있습니까? <span class="lbl">(필수 · 단일)</span></p>
@@ -451,9 +454,9 @@ li.ck{list-style:none;margin-left:-1em}
 <li>가장 아쉬웠던 것: ______</li>
 </ul></div>
 <div class="card"><h3>2-4. 섹션 4 — 문진표와 상담, 그 문턱 (약 1분 30초)</h3><p class="q"><strong>Q19.</strong> 그때 <strong>건강 질문지(문진표)</strong> 를 작성한 적이 있습니까? <span class="lbl">(단일)</span></p>
-<ul class="choice-list"><li>① 있다 — 종사자와 함께 ② 있다 — 혼자 ③ 없다 ④ 기억나지 않는다</li></ul>
+<ul class="choice-list"><li>① 있다 — 종사자와 함께 </li><li>② 있다 — 혼자 </li><li>③ 없다 </li><li>④ 기억나지 않는다</li></ul>
 <p class="q"><strong>Q20.</strong> 질문지의 분량은 어땠습니까? <span class="lbl">(단일)</span></p>
-<ul class="choice-list"><li>① 너무 길어서 부담스러웠다 ② 조금 길었지만 괜찮았다 ③ 적당했다 ④ 더 자세해도 괜찮다 ⑤ 기억나지 않는다</li></ul>
+<ul class="choice-list"><li>① 너무 길어서 부담스러웠다 </li><li>② 조금 길었지만 괜찮았다 </li><li>③ 적당했다 </li><li>④ 더 자세해도 괜찮다 </li><li>⑤ 기억나지 않는다</li></ul>
 <div class="gate">
 <p><strong>▷ 중간 게이트 (Q21)</strong> — 설문 중반, 가장 민감한 질문 앞에 배치한다.</p>
 <p>"지금부터는 조금 더 조심스러운 질문이 이어집니다. 개수를 미리 말씀드리면 5개입니다. <strong>답하고 싶지 않으시면 '여기서 마칩니다'를 골라 주세요.</strong> 지금까지 하신 응답은 그대로 저장되고, 어떤 불이익도 없습니다."</p>
@@ -464,16 +467,42 @@ li.ck{list-style:none;margin-left:-1em}
 <ul class="choice-list"><li>① 마음 상태(우울·불안)</li><li>② 죽고 싶다는 생각</li><li>③ 자해</li><li>④ 가족과의 일</li><li>⑤ 폭력 피해</li><li>⑥ 성과 관련된 일(성관계·성폭력·성매매)</li><li>⑦ 술·약물</li><li>⑧ 잠·식사·씻기</li><li>⑨ 휴대폰·SNS</li><li>⑩ 돈·생활</li><li>⑪ 어려운 질문은 없었다</li><li>⑫ 기억나지 않는다</li></ul>
 <p class="q"><strong>Q23.</strong> 만약 그때 이런 방식이었다면 어땠을까요? <span class="lbl">(필수 · 5점 척도 6문항)</span></p>
 <div class="note-box">
-<p>1 = 전혀 도움 안 됨 · 5 = 매우 도움 됨<br>
-| | ① ② ③ ④ ⑤ |<br>
-|---|---|<br>
-| 이름 대신 별명을 써도 된다고 <strong>먼저</strong> 알려줬다면 | |<br>
-| 답하기 싫은 문항은 건너뛰어도 된다고 알려줬다면 | |<br>
-| 중간에 "여기서 멈춰도 됩니다"라고 말해줬다면 | |<br>
-| 성·폭력처럼 민감한 질문을 따로 모아 뒤쪽에 두었다면 | |<br>
-| "예/아니오" 대신 "얼마나 자주였는지"를 물었다면 | |<br>
-| 결과(점수·등급)를 나와 <strong>함께</strong> 열어줬다면 | |</p>
+<p>1 = 전혀 도움 안 됨 · 5 = 매우 도움 됨</p>
 </div>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>① ② ③ ④ ⑤</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>이름 대신 별명을 써도 된다고 <strong>먼저</strong> 알려줬다면</td>
+<td class="scale"><span>①</span><span>②</span><span>③</span><span>④</span><span>⑤</span></td>
+</tr>
+<tr>
+<td>답하기 싫은 문항은 건너뛰어도 된다고 알려줬다면</td>
+<td class="scale"><span>①</span><span>②</span><span>③</span><span>④</span><span>⑤</span></td>
+</tr>
+<tr>
+<td>중간에 "여기서 멈춰도 됩니다"라고 말해줬다면</td>
+<td class="scale"><span>①</span><span>②</span><span>③</span><span>④</span><span>⑤</span></td>
+</tr>
+<tr>
+<td>성·폭력처럼 민감한 질문을 따로 모아 뒤쪽에 두었다면</td>
+<td class="scale"><span>①</span><span>②</span><span>③</span><span>④</span><span>⑤</span></td>
+</tr>
+<tr>
+<td>"예/아니오" 대신 "얼마나 자주였는지"를 물었다면</td>
+<td class="scale"><span>①</span><span>②</span><span>③</span><span>④</span><span>⑤</span></td>
+</tr>
+<tr>
+<td>결과(점수·등급)를 나와 <strong>함께</strong> 열어줬다면</td>
+<td class="scale"><span>①</span><span>②</span><span>③</span><span>④</span><span>⑤</span></td>
+</tr>
+</tbody>
+</table>
 <p class="q"><strong>Q24.</strong> 질문지에 <strong>꼭 있었으면 하는 것</strong>과 <strong>절대 없었으면 하는 것</strong>이 있다면 적어 주세요. <span class="lbl">(선택 · 짧은 답변 2개)</span></p>
 <ul>
 <li>꼭 있었으면: ______</li>
@@ -481,21 +510,21 @@ li.ck{list-style:none;margin-left:-1em}
 </ul></div>
 <div class="card"><h3>2-5. 섹션 5 — 정신건강 지원, 어떻게 바꾸면 좋을까 (약 1분 30초)</h3><p class="q"><strong>Q25.</strong> 그때 <strong>가장 필요했던 정신건강 지원</strong>은 무엇이었습니까? <span class="lbl">(복수 · 최대 3개)</span></p>
 <ul class="choice-list"><li>① 위기할 때 바로 연결(자살 생각·자해)</li><li>② 익명으로 받는 심리상담</li><li>③ 정신과 진료 동행</li><li>④ 약값·치료비</li><li>⑤ 트라우마 상담</li><li>⑥ 야간·주말·비대면 상담</li><li>⑦ 비슷한 경험을 한 또래의 이야기·동료상담</li><li>⑧ 가족과 따로 받는 개별 상담</li><li>⑨ 일·공부·자립과 함께 가는 상담</li><li>⑩ 필요 없었다</li><li>⑪ 기타</li></ul>
-<p class="q"><strong>Q26.</strong> 그때 지원을 받는 것을 <strong>가장 크게 막은 것</strong>은 무엇이었습니까? <span class="lbl">(필수 · 단일)</span><br>
-<strong>Q27.</strong> 그다음으로 컸던 것은? <span class="lbl">(단일)</span></p>
+<p class="q"><strong>Q26.</strong> 그때 지원을 받는 것을 <strong>가장 크게 막은 것</strong>은 무엇이었습니까? <span class="lbl">(필수 · 단일)</span></p>
+<p class="q"><strong>Q27.</strong> 그다음으로 컸던 것은? <span class="lbl">(단일)</span></p>
 <ul class="choice-list"><li>① '정신과'·'정신건강'이라는 말에 대한 두려움이나 낙인</li><li>② 부모·보호자 동의</li><li>③ 돈·치료비</li><li>④ 어디로 가야 하는지 몰라서</li><li>⑤ 말을 꺼내기 어려워서(종사자가 바빠 보임)</li><li>⑥ 신분증·건강보험이 없어서</li><li>⑦ 진료 기록이 남을까 봐(취업·학교 등)</li><li>⑧ 예약이 너무 늦어서</li><li>⑨ 전에 한 번 끊긴 경험이 있어서</li><li>⑩ 막은 것은 없었다</li><li>⑪ 기타</li></ul>
 <p class="q"><strong>Q28.</strong> 지금(성인이 된 지금)이라면 어떤 형태가 편하겠습니까? <span class="lbl">(복수)</span></p>
-<ul class="choice-list"><li>① 대면 상담 ② 전화·문자 ③ 카카오톡·DM ④ 화상 상담 ⑤ 또래 모임 ⑥ 혼자 하는 온라인 프로그램 ⑦ 정신과 동행 ⑧ 이용하고 싶지 않다</li></ul>
+<ul class="choice-list"><li>① 대면 상담 </li><li>② 전화·문자 </li><li>③ 카카오톡·DM </li><li>④ 화상 상담 </li><li>⑤ 또래 모임 </li><li>⑥ 혼자 하는 온라인 프로그램 </li><li>⑦ 정신과 동행 </li><li>⑧ 이용하고 싶지 않다</li></ul>
 <p class="q"><strong>Q29.</strong> '정신건강'이라는 말 대신 어떤 표현이 덜 부담스럽습니까? <span class="lbl">(단일)</span></p>
-<ul class="choice-list"><li>① 마음 건강 ② 마음 돌봄 ③ 심리 상담 ④ 힘들 때 이야기 ⑤ '정신건강'이라는 말이 좋다 ⑥ 상관없다 ⑦ 기타</li></ul></div>
+<ul class="choice-list"><li>① 마음 건강 </li><li>② 마음 돌봄 </li><li>③ 심리 상담 </li><li>④ 힘들 때 이야기 </li><li>⑤ '정신건강'이라는 말이 좋다 </li><li>⑥ 상관없다 </li><li>⑦ 기타</li></ul></div>
 <div class="card"><h3>2-6. 섹션 6 — 2차 인터뷰 (약 1분)</h3><p class="q"><strong>Q30.</strong> 한 시간~한 시간 반 정도, 더 자세히 이야기해 주실 수 있습니까? <span class="lbl">(필수 · 단일)</span></p>
-<ul class="choice-list"><li>① 하고 싶다 ② 이야기 나눠 보고 정하고 싶다 ③ 지금은 어렵다</li></ul>
+<ul class="choice-list"><li>① 하고 싶다 </li><li>② 이야기 나눠 보고 정하고 싶다 </li><li>③ 지금은 어렵다</li></ul>
 <p class="q"><strong>Q31.</strong> 편한 방식은? <span class="lbl">(복수)</span></p>
-<ul class="choice-list"><li>① 쉼터에서 대면 ② 조용한 카페·공간에서 대면 ③ 화상 ④ 전화 ⑤ 상관없다</li></ul>
+<ul class="choice-list"><li>① 쉼터에서 대면 </li><li>② 조용한 카페·공간에서 대면 </li><li>③ 화상 </li><li>④ 전화 </li><li>⑤ 상관없다</li></ul>
 <p class="q"><strong>Q32.</strong> 편한 시간대는? <span class="lbl">(복수)</span></p>
-<ul class="choice-list"><li>① 평일 낮 ② 평일 저녁 ③ 주말 낮 ④ 주말 저녁</li></ul>
+<ul class="choice-list"><li>① 평일 낮 </li><li>② 평일 저녁 </li><li>③ 주말 낮 </li><li>④ 주말 저녁</li></ul>
 <p class="q"><strong>Q33.</strong> <strong>피하고 싶은 주제</strong>가 있으면 미리 골라 주세요. 그 부분은 인터뷰에서 묻지 않습니다. <span class="lbl">(복수)</span></p>
-<ul class="choice-list"><li>① 가족 ② 성 ③ 자해·자살 ④ 약물·술 ⑤ 폭력 ⑥ 어린 시절 ⑦ 체형·외모 ⑧ 없음 ⑨ 기타</li></ul>
+<ul class="choice-list"><li>① 가족 </li><li>② 성 </li><li>③ 자해·자살 </li><li>④ 약물·술 </li><li>⑤ 폭력 </li><li>⑥ 어린 시절 </li><li>⑦ 체형·외모 </li><li>⑧ 없음 </li><li>⑨ 기타</li></ul>
 <p class="q"><strong>Q34.</strong> 마지막으로 하고 싶은 말이 있으면 자유롭게 적어 주세요. <span class="lbl">(선택 · 장문)</span></p></div>
 <div class="card"><h3>2-7. 종료 화면 문구 (두 가지 버전)</h3><p><strong>완주 종료</strong></p>
 <div class="note-box">
@@ -789,11 +818,13 @@ li.ck{list-style:none;margin-left:-1em}
 <div class="card"><h3>3-6. 영역 2 — 문진표와 위기 질문, 그때와 지금 (15분)</h3><p><strong>진행 방식</strong> — 2026 개정안의 요소를 <strong>카드 6장</strong>으로 인쇄해 하나씩 보여준다. 카드를 먼저 읽게 하고, 느낌을 묻는다.</p>
 <p><strong>카드 1 — "먼저, 오늘 하루"</strong></p>
 <div class="note-box">
-<p>① 오늘 먹은 끼니가 있나요? ② 어젯밤 잠은 어땠나요? ③ 지금 몸에서 불편한 곳이 있나요?<br>
-- 이렇게 시작하면 어떤 느낌일까요?<br>
-- 세 개 중 먼저 물으면 좋겠는 건 무엇인가요?<br>
-- '아직 못 먹었어요'라고 답했을 때, 그다음에 무엇이 이어져야 할까요?</p>
+<p>① 오늘 먹은 끼니가 있나요? ② 어젯밤 잠은 어땠나요? ③ 지금 몸에서 불편한 곳이 있나요?</p>
 </div>
+<ul>
+<li>이렇게 시작하면 어떤 느낌일까요?</li>
+<li>세 개 중 먼저 물으면 좋겠는 건 무엇인가요?</li>
+<li>'아직 못 먹었어요'라고 답했을 때, 그다음에 무엇이 이어져야 할까요?</li>
+</ul>
 <p><strong>카드 2 — "여기까지가 기본입니다. 여기서 멈춰도 됩니다"</strong></p>
 <ul>
 <li>이 문장을 보면 어떤 느낌이 드나요? 믿어지나요?</li>
@@ -807,11 +838,13 @@ li.ck{list-style:none;margin-left:-1em}
 </ul>
 <p><strong>카드 4 — "'예/아니오' 대신 '얼마나 자주였는지'"</strong></p>
 <div class="note-box">
-<p>예: 지난 6개월 동안 '죽고 싶다'는 생각이 든 적이 있나요? → 없음 / 1번 / 2번 이상<br>
-- 이 방식이 덜 부담스러운가요, 아니면 오히려 더 무겁나요?<br>
-- '자주'라고 답했을 때 무엇이 달라져야 하나요?<br>
-- 반대로 '한 번'이라고 답했는데 아무 일도 없으면 어떻게 될까요?</p>
+<p>예: 지난 6개월 동안 '죽고 싶다'는 생각이 든 적이 있나요? → 없음 / 1번 / 2번 이상</p>
 </div>
+<ul>
+<li>이 방식이 덜 부담스러운가요, 아니면 오히려 더 무겁나요?</li>
+<li>'자주'라고 답했을 때 무엇이 달라져야 하나요?</li>
+<li>반대로 '한 번'이라고 답했는데 아무 일도 없으면 어떻게 될까요?</li>
+</ul>
 <p><strong>카드 5 — 성건강 질문을 따로 모으고 '건너뜀' 선택지 두기</strong></p>
 <ul>
 <li>성 관련 질문이 뒤에 모여 있는 게 낫나요, 아니면 아예 처음부터 '이 부분은 안 봐도 됩니다'가 낫나요?</li>
@@ -894,16 +927,16 @@ li.ck{list-style:none;margin-left:-1em}
 </li>
 </ul>
 <ol start="5">
-<li>
-<p><strong>쿨다운</strong></p>
-<div class="note-box">
-<p>"오늘 정말 귀한 이야기였습니다. 급하게 나가실 필요 없습니다. 물 한 잔 드시고 편하게 가세요."<br>
-   - 사례비 전달, 영수증 확인. <strong>나가기 전에 컨디션을 한 번 더 확인</strong>(0~10)하고, 5 이하이면 10분 더 앉아 있거나 귀가 방법을 함께 확인한다.</p>
+<li><strong>쿨다운</strong><div class="note-box">
+<p>"오늘 정말 귀한 이야기였습니다. 급하게 나가실 필요 없습니다. 물 한 잔 드시고 편하게 가세요."</p>
 </div>
 </li>
-<li>
-<p><strong>종료 후</strong></p>
-</li>
+</ol>
+<ul>
+<li>사례비 전달, 영수증 확인. <strong>나가기 전에 컨디션을 한 번 더 확인</strong>(0~10)하고, 5 이하이면 10분 더 앉아 있거나 귀가 방법을 함께 확인한다.</li>
+</ul>
+<ol start="6">
+<li><strong>종료 후</strong></li>
 </ol>
 <ul>
 <li>24시간 안에 안부 문자 1회(원치 않는다고 한 경우 제외).</li>
@@ -1035,11 +1068,11 @@ li.ck{list-style:none;margin-left:-1em}
 <tbody>
 <tr>
 <td>일시·장소·소요</td>
-<td></td>
+<td class="scale"><span>①</span><span>②</span><span>③</span><span>④</span><span>⑤</span></td>
 </tr>
 <tr>
 <td>별명·1차 응답 요약</td>
-<td></td>
+<td class="scale"><span>①</span><span>②</span><span>③</span><span>④</span><span>⑤</span></td>
 </tr>
 <tr>
 <td><strong>핵심 장면 3개</strong> (구체적 사건·대사)</td>
@@ -1051,23 +1084,23 @@ li.ck{list-style:none;margin-left:-1em}
 </tr>
 <tr>
 <td>예상과 달랐던 점</td>
-<td></td>
+<td class="scale"><span>①</span><span>②</span><span>③</span><span>④</span><span>⑤</span></td>
 </tr>
 <tr>
 <td>1차 설문과 <strong>다른</strong> 응답</td>
-<td></td>
+<td class="scale"><span>①</span><span>②</span><span>③</span><span>④</span><span>⑤</span></td>
 </tr>
 <tr>
 <td>새로 나온 개편 아이디어</td>
-<td></td>
+<td class="scale"><span>①</span><span>②</span><span>③</span><span>④</span><span>⑤</span></td>
 </tr>
 <tr>
 <td>다음 인터뷰에서 물어볼 것</td>
-<td></td>
+<td class="scale"><span>①</span><span>②</span><span>③</span><span>④</span><span>⑤</span></td>
 </tr>
 <tr>
 <td>진행자 컨디션·슈퍼비전 필요</td>
-<td></td>
+<td class="scale"><span>①</span><span>②</span><span>③</span><span>④</span><span>⑤</span></td>
 </tr>
 </tbody>
 </table></div></section><section class="panel" id="ops"><h2 class="sec" id="sec4">4. 2026 개정안 ↔ 질문 연결표</h2>
