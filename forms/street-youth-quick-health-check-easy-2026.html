@@ -777,9 +777,13 @@ footer.cred{text-align:center;font-size:.75rem;color:var(--sub);padding:4px 16px
     var fills = document.querySelectorAll('#sheetFront .mline .fill');
     if (fills[0]) fills[0].textContent = nick ? ' ' + nick : '';
     if (fills[1]) fills[1].textContent = age ? ' ' + age : '';
-    if (fills[2] && d){
-      var p = d.split('-');
-      fills[2].textContent = ' ' + p[0] + '.' + p[1] + '.' + p[2];
+    if (fills[2]){
+      if (d){
+        var p = d.split('-');
+        fills[2].textContent = ' ' + p[0] + '.' + p[1] + '.' + p[2];
+      } else {
+        fills[2].textContent = '';
+      }
     }
     var place = document.querySelector('#sheetFront .place i');
     if (place && pl){
