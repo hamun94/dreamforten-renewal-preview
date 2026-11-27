@@ -241,6 +241,8 @@ footer.cred{text-align:center;font-size:.75rem;color:var(--sub);padding:4px 16px
   .sheet .readbox ul{margin:.7mm 0 0 3.6mm;padding:0;font-size:7.1pt;line-height:1.45}
   .sheet .readbox li{margin:.25mm 0}
   .sheet .leg{font-size:6.6pt;color:#40564a;margin:1.2mm 0 0;line-height:1.4}
+  .sheet .howto{font-size:6.9pt;color:#14563a;background:#f6faf7;border:.3mm solid #cfe3d7;border-radius:1mm;padding:1.3mm 2.2mm;margin:1.8mm 0 0;line-height:1.45}
+  .sheet .howto b{color:#1f6b4f}
 }
 </style>
 </head>
@@ -568,6 +570,8 @@ footer.cred{text-align:center;font-size:.75rem;color:var(--sub);padding:4px 16px
 
   <p class="leg">※ ⑥의 ❗는 복약·진료 재개 신호로 판정은 🟡, ⑫ ‘응’은 여성 건강 상담·진료 연계(🟡)로 봅니다.</p>
 
+  <p class="howto"><b>쓰는 법</b> — 앞면은 아이와 함께 보고, 뒷면은 종사자용입니다. A5 양면(짧은 쪽 넘김)으로 인쇄해 그대로 포켓에 넣어 쓰세요. 기록은 아이가 보는 앞에서, 누구에게 보여 줄지 알려 준 뒤에 적습니다.</p>
+
   <div class="foot">
     <span>1393 자살예방 · 1388 청소년 · 112 경찰 · 119 응급</span>
     <span>2026 · A5 양면 인쇄</span>
@@ -577,7 +581,7 @@ footer.cred{text-align:center;font-size:.75rem;color:var(--sub);padding:4px 16px
 <script>
 (function(){
   var qs = Array.prototype.slice.call(document.querySelectorAll('.q'));
-  var state = {};
+  var state = {}, sel = {};
   var NAMES = {1:'오늘 밥',2:'어젯밤 잠',3:'자는 곳',4:'아픈 데',5:'몸 신호',6:'병원·약',7:'슬픈 마음',8:'숨고 싶은 마음',9:'마음이 힘듦',10:'괴롭힘',11:'생리',12:'아랫배'};
   var OPENER = {
     3:'지금 머무는 곳이 불안하구나. 오늘 밤 안전하게 쉴 곳부터 같이 찾아보자.',
@@ -598,7 +602,7 @@ footer.cred{text-align:center;font-size:.75rem;color:var(--sub);padding:4px 16px
       var q = +el.dataset.q, lv = state[q];
       el.classList.toggle('flagged', lv === 3);
       Array.prototype.forEach.call(el.querySelectorAll('.opt'), function(b){
-        b.setAttribute('aria-pressed', (+b.dataset.lv === lv) ? 'true' : 'false');
+        b.setAttribute('aria-pressed', (sel[q] === b) ? 'true' : 'false');
       });
     });
   }
@@ -701,8 +705,8 @@ footer.cred{text-align:center;font-size:.75rem;color:var(--sub);padding:4px 16px
       var b = e.target.closest('.opt');
       if (!b) return;
       var q = +el.dataset.q, lv = +b.dataset.lv;
-      if (state[q] === lv) delete state[q];   // 다시 누르면 지워짐
-      else state[q] = lv;
+      if (sel[q] === b){ delete state[q]; delete sel[q]; }   // 같은 걸 다시 누르면 지워짐
+      else { state[q] = lv; sel[q] = b; }
       update();
       if (state[q] !== undefined){
         var next = qs.filter(function(x){ return +x.dataset.q > q; })[0];
@@ -728,6 +732,7 @@ footer.cred{text-align:center;font-size:.75rem;color:var(--sub);padding:4px 16px
     if (!Object.keys(state).length) return;
     if (!confirm('적은 내용을 모두 지울까요?')) return;
     state = {};
+    sel = {};
     document.getElementById('nick').value = '';
     document.getElementById('age').value = '';
     Array.prototype.forEach.call(document.querySelectorAll('#places button'), function(x){ x.classList.remove('on'); });
