@@ -461,7 +461,7 @@ footer.end{color:var(--sub);font-size:.74rem;text-align:center;padding:18px 8px 
           '7-7':[0,1,2],'7-8':[0,1,2],'7-9':[0,1,2],'7-10':[0,1,2],'7-11':[0,1,2],'7-12':[0,1,2],
           '7-13':[0,2,2],'7-14':[0,1,2],
           '24':[0,1,2],'25':[0,2,2],'26':[0,1,2],'27':[0,1,2],'28':[0,1,2]};
-  var NAME={'2':'위험','1':'위험','0':'일반'};
+  var NAME={'2':'고위험','1':'위험','0':'일반'};
   function gradeOf(q){
     var row=document.querySelector('.item[data-q="'+q+'"]'); if(!row) return -1;
     var cs=[].slice.call(row.querySelectorAll('.chip'));
@@ -501,7 +501,7 @@ footer.end{color:var(--sub);font-size:.74rem;text-align:center;padding:18px 8px 
     var lvl=Math.max(lvl1, top);
     var txt = lvl===2?'<b class="big" style="color:#b3261e">고위험군</b>':(lvl===1?'<b class="big" style="color:#9a6100">위험군</b>':(lvl===0?'<b class="big" style="color:#2f6b34">일반군</b>':'<b class="big">미확인</b>'));
     var html='<div><b>참고 등급</b> · '+txt+'</div>';
-    html+='<div>· 위험요인: '+p1+'점'+((p1>=5)?' → 고위험':(p1>=3?' → 위험':' → 일반'))+(miss1?' (미응답 '+miss1+'문항)':'')+'</div>';
+    html+='<div>· 위험요인: '+(miss1>=15?'미응답':'<b>'+p1+'점</b>'+((p1>=5)?' → 고위험':(p1>=3?' → 위험':' → 일반'))+(miss1?' (미응답 '+miss1+'문항)':''))+'</div>';
     html+='<div>· 위기·문제행동: '+(hits.length?hits.join(', '):'해당 없음')+'</div>';
     if(rf) html+='<div style="color:#b3261e"><b>❗ Red Flag 신호가 있습니다. 등급과 무관하게 A-1 등급표의 즉시·당일 조치를 먼저 확인하세요.</b></div>';
     html+='<div class="tiny" style="margin-top:6px">건너뜀·미확인 문항('+skipped+')은 추정하지 말고 다음 만남에서 확인합니다. 이 계산은 현장 판단을 돕기 위한 참고값입니다.</div>';
