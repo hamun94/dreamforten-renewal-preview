@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="KYCI 청소년복지시설 운영모형 개편안과 2026.11.01 시·군·구 인구·시설 현황, 현장 관점을 9대 쟁점으로 맞댄 A4 1쪽 정합표. 일치 2·반걸음 2·간극 5와 3대 이동.">
+<meta name="author" content="OH Kyoungok (오경옥)">
+<meta name="theme-color" content="#0b5f5a">
+<title>KYCI 개편안 × 현장 9대 쟁점 정합표 — A4 1쪽</title>
+<style>
+:root{--ink:#17201f;--muted:#5d6a67;--line:#dfe5e2;--bg:#eef1ef;--card:#fff;
+--accent:#0b5f5a;--accent-d:#06302d;--accent2:#b4552d;--soft:#eef4f2;--warn:#fdf4e7;--warnb:#d99a4e}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);word-break:keep-all;overflow-wrap:break-word;
+ font-family:"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic","Noto Sans CJK KR",sans-serif}
+.sheet{max-width:960px;margin:0 auto;background:var(--card);box-shadow:0 2px 20px rgba(0,0,0,.06)}
+/* 헤더 */
+.head{background:linear-gradient(160deg,#052b28 0%,#0b5f5a 60%,#16806f 100%);color:#fff;padding:22px 26px 18px}
+.kicker{font-size:10.5px;letter-spacing:.18em;font-weight:800;opacity:.85;text-transform:uppercase}
+h1{font-size:24px;line-height:1.3;margin:7px 0 6px;font-weight:800;letter-spacing:-.03em}
+h1 .vs{color:#ffd9a8;font-weight:600}
+.sub{font-size:12.6px;line-height:1.6;margin:0;opacity:.93;max-width:56em}
+.meta{display:flex;flex-wrap:wrap;gap:6px;margin-top:11px;font-size:11.3px}
+.meta span{background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.28);padding:3px 9px;border-radius:999px}
+.meta b{font-weight:800}
+/* 요약 띠 */
+.strip{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;padding:14px 26px 4px;background:#fbfcfb}
+.k{border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:8px;padding:8px 10px;background:#fff}
+.k b{display:block;font-size:18px;color:var(--accent-d);letter-spacing:-.03em;line-height:1.2}
+.k span{display:block;font-size:11.6px;color:#31423f;font-weight:700;margin-top:2px}
+.k em{display:block;font-style:normal;font-size:10.6px;color:var(--muted);line-height:1.45;margin-top:3px}
+/* 표 */
+.body{padding:10px 26px 0}
+.wrap{overflow-x:auto;margin:6px 0 0;border:1px solid var(--line);border-radius:9px}
+table{border-collapse:collapse;width:100%;font-size:12.4px;line-height:1.55}
+thead th{background:var(--soft);color:#0d3b37;font-size:11.6px;font-weight:800;text-align:left;padding:7px 9px;
+ border-bottom:1.5px solid #c9d8d3;letter-spacing:-.01em}
+tbody td{padding:7px 9px;border-bottom:1px solid var(--line);vertical-align:top}
+tbody tr:last-child td{border-bottom:none}
+tbody tr:nth-child(even){background:#fcfdfc}
+td.issue{font-weight:800;color:#0d3b37;white-space:nowrap;font-size:12.2px}
+td.issue small{display:block;font-weight:600;color:var(--muted);font-size:10.2px;letter-spacing:0}
+td.dx{white-space:nowrap;text-align:center;font-weight:800;font-size:11.2px}
+.col-dx{text-align:center}
+.tx{font-size:11.8px;color:#26332f}
+.j-gap{color:#b3261e}.j-half{color:#a5681a}.j-ok{color:#0b6b3a}
+.pill{display:inline-block;padding:2px 7px;border-radius:999px;font-size:10.6px;line-height:1.5;border:1px solid}
+.p-gap{background:#fdeeec;border-color:#f0c3bd;color:#8e1d17}
+.p-half{background:#fdf6e8;border-color:#ecd0a2;color:#7c4d0c}
+.p-ok{background:#eaf6ee;border-color:#b6dcc4;color:#0a5c33}
+td.more{color:#22302c}
+td.more b{color:var(--accent-d)}
+/* 3대 이동 */
+.moves{margin:11px 0 0;border:1px solid var(--line);border-radius:9px;overflow:hidden}
+.moves h2{margin:0;padding:8px 12px;background:var(--accent-d);color:#fff;font-size:13px;font-weight:800;letter-spacing:-.01em}
+.moves h2 span{font-weight:600;opacity:.8;font-size:11px;margin-left:6px}
+.mv{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.mv>div{padding:9px 12px 10px;border-right:1px solid var(--line)}
+.mv>div:last-child{border-right:none}
+.mv h3{margin:0 0 3px;font-size:12.2px;color:var(--accent);font-weight:800}
+.mv h3 i{font-style:normal;display:inline-grid;place-items:center;width:16px;height:16px;border-radius:50%;
+ background:var(--accent);color:#fff;font-size:9.6px;margin-right:4px;vertical-align:1px}
+.mv p{margin:0;font-size:11.3px;line-height:1.55;color:#2b3935}
+.order{margin:9px 0 0;padding:8px 12px;background:var(--warn);border:1px solid #f0dcbb;border-radius:9px;
+ font-size:11.6px;line-height:1.6;color:#5a4118}
+.order b{color:#8a5410}
+.src{padding:9px 26px 16px;font-size:10.2px;line-height:1.62;color:var(--muted);border-top:1px solid var(--line);margin-top:12px}
+.src b{color:#3c4a46}
+/* 모바일: 카드형 */
+@media screen and (max-width:720px){
+ .head{padding:18px 16px 15px}
+ h1{font-size:20.5px}
+ .sub{font-size:12px}
+ .strip{grid-template-columns:1fr;padding:11px 16px 2px;gap:7px}
+ .body{padding:8px 16px 0}
+ .wrap{overflow:visible;border:none;border-radius:0}
+ table,tbody,tr,td{display:block;width:100%}
+ thead{display:none}
+ tbody tr{border:1px solid var(--line);border-radius:10px;margin-bottom:10px;padding:10px 12px;background:#fff!important}
+ tbody td{border:none;padding:0 0 6px;font-size:13px;line-height:1.62}
+ tbody td:last-child{padding-bottom:0}
+ tbody td::before{content:attr(data-label);display:block;font-size:10.6px;font-weight:800;color:var(--accent);letter-spacing:-.01em;margin-bottom:1px}
+ td.issue{font-size:14.5px;font-weight:800;padding:0 0 7px;margin-bottom:7px;border-bottom:1px dashed var(--line)}
+ td.issue::before{content:none}
+ td.issue small{display:inline;font-size:11px;color:var(--muted);font-weight:700;margin-left:5px}
+ td.dx{font-size:13px;text-align:left}
+ td.dx .pill{font-size:11.4px}
+ td.more b{font-weight:800}
+ .mv{grid-template-columns:1fr}
+ .mv>div{border-right:none;border-bottom:1px solid var(--line)}
+ .mv>div:last-child{border-bottom:none}
+ .src{padding:8px 16px 14px}
+}
+/* 인쇄: A4 1쪽 */
+@page{size:A4 portrait;margin:7mm 8mm 6mm}
+@media print{
+ html,body{background:#fff}
+ body{font-size:8.8pt;line-height:1.42;color:#111;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+ .sheet{max-width:none;box-shadow:none;margin:0}
+ .head{padding:0 0 3.6mm;background:none;color:#0b3d39;border-bottom:1.8pt solid #0b5f5a;border-radius:0}
+ .kicker{font-size:7.4pt;color:#5c7b77;letter-spacing:.14em}
+ h1{font-size:18pt;margin:.8mm 0 1mm;color:#08302e}
+ h1 .vs{color:#8a4a1f}
+ .sub{font-size:8.4pt;color:#38514d;opacity:1}
+ .meta{margin-top:1.8mm;gap:4px}
+ .meta span{font-size:7.4pt;padding:.7mm 2.1mm;background:#eef4f2;border:1px solid #cfe0db;color:#26433f}
+ .strip{display:grid;grid-template-columns:repeat(3,1fr);gap:2.2mm;padding:2.6mm 0 0;background:none}
+ .k{border:1px solid #d5dfdb;border-left:1mm solid #0b5f5a;border-radius:1mm;padding:1.7mm 2.4mm;background:#fbfdfc}
+ .k b{font-size:13pt;line-height:1.15}
+ .k span{font-size:8pt;margin-top:.4mm}
+ .k em{font-size:7.1pt;line-height:1.38;margin-top:.5mm}
+ .body{padding:2.2mm 0 0}
+ .wrap{overflow:visible;border:1px solid #cbd8d4;border-radius:1mm;margin:0}
+ table{font-size:8.15pt;line-height:1.4}
+ thead th{font-size:7.9pt;padding:1.3mm 1.7mm;background:#e8f1ee}
+ tbody td{padding:1.35mm 1.7mm}
+ td.issue{font-size:8.4pt;padding-right:1.9mm}
+ td.issue small{font-size:6.9pt}
+ td.dx{font-size:7.5pt}
+ .pill{font-size:7.1pt;padding:.3mm 1.5mm}
+ td.more{font-size:8pt}
+ .moves{margin-top:2.2mm;border-radius:1mm}
+ .moves h2{font-size:9.4pt;padding:1.3mm 2.4mm;background:#06302d!important;color:#fff!important}
+ .moves h2 span{font-size:7.7pt}
+ .mv>div{padding:1.5mm 2.4mm 1.7mm}
+ .mv h3{font-size:8.6pt;margin-bottom:.4mm}
+ .mv h3 i{width:3.9mm;height:3.9mm;font-size:6.7pt}
+ .mv p{font-size:7.9pt;line-height:1.42}
+ .order{margin-top:1.8mm;padding:1.5mm 2.4mm;font-size:7.9pt;background:#fdf4e7;border:1px solid #eed9b6;border-radius:1mm}
+ .src{margin-top:2mm;padding:1.7mm 0 0;font-size:6.9pt;line-height:1.48;border-top:1px solid #d5dfdb}
+ tbody tr:nth-child(even){background:#fbfcfb}
+}
+</style>
+</head>
+<body>
+<div class="sheet">
+
+<header class="head">
+  <div class="kicker">정합 점검 · A4 1쪽 요약</div>
+  <h1>KYCI 개편안 <span class="vs">×</span> 현장 9대 쟁점 정합표</h1>
+  <p class="sub">청소년복지시설 운영모형 개선 연구(2026.10.29)의 개편안 · 2026.11.01 시·군·구 인구·시설 현황 · 현장 관점을 같은 줄에 놓고, 어디서 맞고 어디서 어긋나는지를 판정과 다음 걸음으로 정리했다.</p>
+  <div class="meta">
+    <span><b>OH Kyoungok</b> (오경옥)</span>
+    <span>2026. 11. 27.</span>
+    <span>판정 <b>일치 2 · 반걸음 2 · 간극 5</b></span>
+    <span>청소년 9~24세 7,324,678명 · 쉼터 139개소 · 정원 1,380명</span>
+  </div>
+</header>
+
+<div class="strip">
+  <div class="k"><b>5 / 9</b><span>간극으로 판정된 쟁점</span><em>문턱·성별·건강·책임·참여 — 개편안이 설계하지 않은 지점</em></div>
+  <div class="k"><b>716,227명</b><span>일시쉼터가 0개인 3개 시·도 청소년</span><em>충남·경북·세종. 트랙1이 '시설'이면 이곳엔 트랙1이 없다</em></div>
+  <div class="k"><b>0.6%</b><span>건강특화형 3개소가 일시쉼터 국비에서 차지하는 몫</span><em>연 4,800만 원(3×1,600만 원), 6년 동결</em></div>
+</div>
+
+<div class="body">
+<div class="wrap">
+<table>
+<thead>
+<tr>
+  <th style="width:11%">쟁점</th>
+  <th style="width:29%">KYCI 개편안 (2026.10)</th>
+  <th style="width:27%">현장·시군구 현실 (2026.11.01)</th>
+  <th class="col-dx" style="width:8%">판정</th>
+  <th style="width:25%">한 걸음 더</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td class="issue">설계 단위<small>공간의 눈금</small></td>
+  <td data-label="KYCI 개편안" class="tx">46개 권역(5개 시·군·구 내외)에 트랙별 최소 1개소, 신규 54개소</td>
+  <td data-label="현장·현실" class="tx">230개 시·군·구 중 156곳(67.8%) 미배치, 군은 80/82곳(97.6%)</td>
+  <td data-label="판정" class="dx"><span class="pill p-half">반걸음</span></td>
+  <td data-label="한 걸음 더" class="more">권역 안에서도 <b>군 단위는 빈다</b> → '시·군·구 1개 접점' 최소선을 병기</td>
+</tr>
+<tr>
+  <td class="issue">문턱<small>트랙1</small></td>
+  <td data-label="KYCI 개편안" class="tx">트랙1 = 드롭인·응급허브, 7일 유지, 초기 스크리닝 후 넘기는 게이트웨이</td>
+  <td data-label="현장·현실" class="tx">일시쉼터 0개 3개 시·도(716,227명), 이동형 0대 6개 시·도(1,585,319명)</td>
+  <td data-label="판정" class="dx"><span class="pill p-gap">간극</span></td>
+  <td data-label="한 걸음 더" class="more">트랙1이 '시설'이면 그 3개 시·도엔 없다 → <b>차량·거점·온라인·비보호 접점의 혼합 기능</b>으로 정의</td>
+</tr>
+<tr>
+  <td class="issue">성별<small>최소선</small></td>
+  <td data-label="KYCI 개편안" class="tx">개편안·인력표에 성별 축이 없다(모델 A/B 통합형)</td>
+  <td data-label="현장·현실" class="tx">단기 32/50곳(64%)·중장기 28/33곳(85%)이 한쪽 성별만 / 남 549,254·여 342,650명</td>
+  <td data-label="판정" class="dx"><span class="pill p-gap">간극</span></td>
+  <td data-label="한 걸음 더" class="more">통합형 전환이 최소선을 약화시킬 수 있다 → <b>권역별 남·여 최소 1개소</b> 명문화</td>
+</tr>
+<tr>
+  <td class="issue">건강<small>판정·기록</small></td>
+  <td data-label="KYCI 개편안" class="tx">트랙1에 의료·건강검진·통원비 / 표준 스크리닝 4영역(안전·주거·정서·기능, <b>신체 없음</b>)</td>
+  <td data-label="현장·현실" class="tx">건강특화형 3개소가 <b>모두 이동형</b>, 사례의 70.2%는 고정형 / 추가사업비 1,600만 원 6년 동결</td>
+  <td data-label="판정" class="dx"><span class="pill p-gap">간극</span></td>
+  <td data-label="한 걸음 더" class="more">가장 많은 문에 건강 기능이 0 → 4영역에 <b>신체</b>(피부·성병·임신·치아·영양·수면) 추가, 고정형 연계 의무화</td>
+</tr>
+<tr>
+  <td class="issue">기록·데이터<small>자로 재기</small></td>
+  <td data-label="KYCI 개편안" class="tx">표준 연계서식, 통합사례판정회의, 조기발굴·다기관 데이터 연계(제언 2)</td>
+  <td data-label="현장·현실" class="tx">이동형 사례등록 <b>선택</b>, 정원·가동률·입소거절 미공표, 위기청소년 수 비공개</td>
+  <td data-label="판정" class="dx"><span class="pill p-ok">일치</span></td>
+  <td data-label="한 걸음 더" class="more">방향은 같다. 다만 <b>최소 필드 의무화와 공표 항목</b>이 없으면 개편 후에도 잴 수 없다</td>
+</tr>
+<tr>
+  <td class="issue">재정<small>접점 예산</small></td>
+  <td data-label="KYCI 개편안" class="tx">466.9억 원(606.1→1,073.1억), 트랙1 137.5억 중 프로그램 예산 <b>0</b> / 매칭 50%, 한시적 국비 필요</td>
+  <td data-label="현장·현실" class="tx">접점 예산은 일시쉼터 국비의 0.6%(4,800만 원), 사각지대 156곳</td>
+  <td data-label="판정" class="dx"><span class="pill p-ok">일치</span></td>
+  <td data-label="한 걸음 더" class="more">매칭 격차 경고는 정확하다 → 개편 예산에 <b>접점·형평 항목을 따로 표기</b>하고 국비로 직접 부담</td>
+</tr>
+<tr>
+  <td class="issue">책임<small>운영 주체</small></td>
+  <td data-label="KYCI 개편안" class="tx">시설 내부 운영모형 중심 — 운영 주체·재정 책임은 설계하지 않았다</td>
+  <td data-label="현장·현실" class="tx">직영 1개소(0.7%), 민간 위탁·신고 94.2% / 위탁이 끝나면 접점이 사라진다</td>
+  <td data-label="판정" class="dx"><span class="pill p-gap">간극</span></td>
+  <td data-label="한 걸음 더" class="more">개편은 '누가 운영하는가'를 비웠다 → <b>국가·광역 직영 6기능</b>을 부속 과제로</td>
+</tr>
+<tr>
+  <td class="issue">대상·연령<small>후기청소년</small></td>
+  <td data-label="KYCI 개편안" class="tx">자립지원 상한 24→25세, 경계선지능·정신건강 시 29~30세까지(제언 1)</td>
+  <td data-label="현장·현실" class="tx">후기청소년 2,835,409명(38.7%), 자립지원관 13개소·<b>7개 시·도 없음</b></td>
+  <td data-label="판정" class="dx"><span class="pill p-half">반걸음</span></td>
+  <td data-label="한 걸음 더" class="more">연령만 올리면 지역 인프라가 없어 작동하지 않는다 → 사후관리 권역 5~6개, 수당 산정에 일시 포함</td>
+</tr>
+<tr>
+  <td class="issue">당사자·인식<small>참여의 전제</small></td>
+  <td data-label="KYCI 개편안" class="tx">제언 11 당사자 참여형 운영, 제언 12 경계선지능·정신건강 최대 80% 특화</td>
+  <td data-label="현장·현실" class="tx">미배치 지역은 참여 이전에 <b>'문'이 없다</b></td>
+  <td data-label="판정" class="dx"><span class="pill p-gap">간극</span></td>
+  <td data-label="한 걸음 더" class="more">참여 제도는 문이 있는 곳의 이야기 → <b>접점 확충이 참여의 전제</b></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<section class="moves">
+  <h2>3대 이동<span>세 겹이 어긋나는 지점에서 필요한 세 가지 전환</span></h2>
+  <div class="mv">
+    <div>
+      <h3><i>1</i>시설 개편 → 기능 배치</h3>
+      <p>트랙1을 '일시쉼터라는 시설'이 아니라 <b>'응급·위기안정이라는 기능'</b>으로 정의하면 차량(이동형)·거점(고정형·드롭인)·온라인(24시간 문자)·비보호 접점이 모두 트랙1이 된다. 일시쉼터 0개 3개 시·도(716,227명)에도 문이 생긴다.</p>
+    </div>
+    <div>
+      <h3><i>2</i>권역 → 생활권</h3>
+      <p>권역 거점(트랙2·3)과 <b>생활권 접점(트랙1)</b>을 두 층으로 나눈다. 5개 시·군을 묶은 권역 중심지에 시설이 서도 군 청소년은 30~60분을 이동해야 한다. 0개소 권역 8곳은 두 층이 모두 비어 있다.</p>
+    </div>
+    <div>
+      <h3><i>3</i>위탁 → 책임</h3>
+      <p>국가·광역 직영 6기능을 개편안 부속 과제로 넣고, 77% 증액은 <b>한시적 국비 직접지원</b>으로. 아니면 개편이 지자체 재정 격차로 바뀌어 사각지대를 넓힌다.</p>
+    </div>
+  </div>
+</section>
+
+<div class="order">
+  <b>순서가 중요하다.</b> 지침·접점(2027)을 먼저 세우고 시설 전환(2028~2030)을 뒤따르게 한다. 순서를 뒤집으면 예산이 건물과 인력에 먼저 묶이고, 3년 뒤에도 일시쉼터가 없는 3개 시·도는 그대로다.
+</div>
+</div>
+
+<div class="src">
+  <b>출처</b> 한국청소년상담복지개발원 「청소년복지시설의 가정 밖 청소년 보호·자립 지원 실태 및 운영모형 개선 연구」(청소년상담연구 260, 2026.10.29, 원문 228쪽) · 성평등가족부 「청소년 사업 안내」Ⅱ권 2017·2021·2022·2024·2025·2026년판 · 행정안전부 주민등록 인구통계 2026.10.31(인구 9~24세) · 성평등가족부 「청소년복지시설 기관현황」 2026.10 · 청소년안전망 센터 정보 2025.11.24(보호정원). 판정(일치·반걸음·간극)과 '한 걸음 더'는 위 수치를 겹쳐 이 보고서가 내린 해석이며, 개편안 원문의 표현이 아니다. 716,227명·1,585,319명·0.6%는 공표값을 합산·계산한 값이다(일시쉼터 국비 76.6억 원 = 이동형 14×1.97억 + 고정형 19×2.58억).
+</div>
+</div>
+</body>
+</html>
