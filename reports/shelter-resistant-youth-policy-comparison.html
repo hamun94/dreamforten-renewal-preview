@@ -20,9 +20,10 @@ h1{font-size:28px;line-height:1.36;margin:10px 0 10px;font-weight:800;letter-spa
 .sub{font-size:14.5px;line-height:1.7;opacity:.93;margin:0 0 18px;max-width:46em}
 .meta{display:flex;flex-wrap:wrap;gap:8px;font-size:12.5px}
 .meta span{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28);padding:4px 10px;border-radius:999px}
-nav.toc{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:-18px 0 30px;box-shadow:0 2px 10px rgba(0,0,0,.05);position:relative}
-nav.toc b{display:block;font-size:12.5px;color:var(--accent);letter-spacing:.08em;margin-bottom:8px}
-nav.toc ol{margin:0;padding-left:18px}
+details.tocbox{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:6px 18px 10px;margin:-18px 0 26px;box-shadow:0 2px 10px rgba(0,0,0,.05)}
+details.tocbox summary{cursor:pointer;font-size:13.5px;font-weight:800;color:var(--accent);padding:10px 0;letter-spacing:.02em}
+nav.toc ol{margin:0;padding-left:18px;list-style:none}
+nav.toc>ol.toc-list{padding-left:0}
 nav.toc>ol.toc-list>li{margin:6px 0;font-weight:700;font-size:14.5px}
 nav.toc ol.toc-sub{margin:4px 0 8px;padding-left:16px;list-style:none}
 nav.toc ol.toc-sub li{font-size:13.5px;font-weight:400;color:var(--muted);margin:2px 0}
@@ -85,7 +86,7 @@ footer{margin-top:44px;padding-top:16px;border-top:1px solid var(--line);font-si
   </div>
 </header>
 <div class="wrap">
-<nav class="toc"><b>목차</b><ol class="toc-list">
+<details class="tocbox"><summary>목차 · 8개국 12개 모델 · 보완점 12개</summary><ol class="toc-list">
 <li><a href="#_2">읽기 안내</a>
 <ol class="toc-sub">
 </ol></li>
@@ -151,7 +152,7 @@ footer{margin-top:44px;padding-top:16px;border-top:1px solid var(--line);font-si
 <li><a href="#_4">각주</a>
 <ol class="toc-sub">
 </ol></li>
-</ol></nav>
+</ol></details>
 
 <div class="docinfo"><p><strong>작성</strong> OH Kyoungok (오경옥)
 <strong>작성일</strong> 2026년 11월 27일
